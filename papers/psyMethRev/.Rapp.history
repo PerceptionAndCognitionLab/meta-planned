@@ -1,0 +1,1069 @@
+source('../../shared/libB.R')#
+dat=makeDataFrameML3("../../shared/ML3AllSites.csv")#
+f=freqEst(dat)#
+samp=doChain(dat)#
+b=bayesEst(samp)#
+pdf('ml3plots.pdf',width=10,height=10)#
+layout(matrix(c(0,1,2,0,0,5,6,0,0,3,4,0,0,7,8,0),byrow=F,ncol=2),heights=c(.2,1,1,.2,.2,1,1.2))#
+par(mar=c(0,4,.5,1),cex=1.1,mgp=c(1,1,0))#
+plotter(subset(f,contrast=='site'),subset(b,contrast=='site'),c("Women","Men"),range=1,main="A. Suitability by Site Effects")#
+plotter(subset(f,contrast=='gender'),subset(b,contrast=='gender'),c("Women","Men"),range=1,main="B. Suitability by Gender")#
+plotter(subset(f,contrast=='credMen'),subset(b,contrast=='credMen'),c("No","Yes"),range=3,main="C. Credentialism for Men")#
+plotter(subset(f,contrast=='credWomen'),subset(b,contrast=='credWomen'),c("No","Yes"),range=3,main="D. Credentialism for Women")#
+dev.off()
+pdf('ml3plots.pdf',width=10,height=10)#
+layout(matrix(c(0,1,2,0,0,5,6,0,0,3,4,0,0,7,8,0),byrow=F,ncol=2),heights=c(.2,1,1,.2,.2,1,1,.2))#
+par(mar=c(0,4,.5,1),cex=1.1,mgp=c(1,1,0))#
+plotter(subset(f,contrast=='site'),subset(b,contrast=='site'),c("Women","Men"),range=1,main="A. Suitability by Site Effects")#
+plotter(subset(f,contrast=='gender'),subset(b,contrast=='gender'),c("Women","Men"),range=1,main="B. Suitability by Gender")#
+plotter(subset(f,contrast=='credMen'),subset(b,contrast=='credMen'),c("No","Yes"),range=3,main="C. Credentialism for Men")#
+plotter(subset(f,contrast=='credWomen'),subset(b,contrast=='credWomen'),c("No","Yes"),range=3,main="D. Credentialism for Women")#
+dev.off()
+pdf('ml3plots.pdf',width=10,height=10)#
+layout(matrix(c(0,1,2,0,0,5,6,0,0,3,4,0,0,7,8,0),byrow=F,ncol=2),heights=c(.2,1,1,.2,.3,1,1,.2))#
+par(mar=c(0,4,.5,1),cex=1.1,mgp=c(1,1,0))#
+plotter(subset(f,contrast=='site'),subset(b,contrast=='site'),c("Women","Men"),range=1,main="A. Suitability by Site Effects")#
+plotter(subset(f,contrast=='gender'),subset(b,contrast=='gender'),c("Women","Men"),range=1,main="B. Suitability by Gender")#
+plotter(subset(f,contrast=='credMen'),subset(b,contrast=='credMen'),c("No","Yes"),range=3,main="C. Credentialism for Men")#
+plotter(subset(f,contrast=='credWomen'),subset(b,contrast=='credWomen'),c("No","Yes"),range=3,main="D. Credentialism for Women")#
+dev.off()
+pdf('ml3plots.pdf',width=10,height=10)#
+layout(matrix(c(0,1,2,0,0,5,6,0,0,3,4,0,0,7,8,0),byrow=F,ncol=2),heights=c(.2,1,1,.2,.4,1,1,.2))#
+par(mar=c(0,4,.5,1),cex=1.1,mgp=c(1,1,0))#
+plotter(subset(f,contrast=='site'),subset(b,contrast=='site'),c("Women","Men"),range=1,main="A. Suitability by Site Effects")#
+plotter(subset(f,contrast=='gender'),subset(b,contrast=='gender'),c("Women","Men"),range=1,main="B. Suitability by Gender")#
+plotter(subset(f,contrast=='credMen'),subset(b,contrast=='credMen'),c("No","Yes"),range=3,main="C. Credentialism for Men")#
+plotter(subset(f,contrast=='credWomen'),subset(b,contrast=='credWomen'),c("No","Yes"),range=3,main="D. Credentialism for Women")#
+dev.off()
+pdf('ml3plots.pdf',width=10,height=10)#
+layout(matrix(c(0,1,2,0,0,5,6,0,0,3,4,0,0,7,8,0),byrow=F,ncol=2),heights=c(.2,1,1,.2,.4,1,1,.2))#
+par(mar=c(0,4,.5,1),cex=1.1,mgp=c(1,1,0))#
+plotter(subset(f,contrast=='site'),subset(b,contrast=='site'),c("Women","Men"),range=2,main="A. Suitability by Site Effects")#
+plotter(subset(f,contrast=='gender'),subset(b,contrast=='gender'),c("Women","Men"),range=2,main="B. Suitability by Gender")#
+plotter(subset(f,contrast=='credMen'),subset(b,contrast=='credMen'),c("Some","Most"),range=2,main="C. Credentialism for Men")#
+plotter(subset(f,contrast=='credWomen'),subset(b,contrast=='credWomen'),c("Some","Most"),range=2,main="D. Credentialism for Women")#
+dev.off()
+source
+source('../../shared/libB.R')
+pdf('ml3plots.pdf',width=10,height=10)#
+layout(matrix(c(0,1,2,0,0,5,6,0,0,3,4,0,0,7,8,0),byrow=F,ncol=2),heights=c(.2,1,1,.2,.4,1,1,.2))#
+par(mar=c(0,4,.5,1),cex=1.1,mgp=c(1,1,0))#
+plotter(subset(f,contrast=='site'),subset(b,contrast=='site'),c("Women","Men"),range=2,main="A. Suitability by Site Effects")#
+plotter(subset(f,contrast=='gender'),subset(b,contrast=='gender'),c("Women","Men"),range=2,main="B. Suitability by Gender")#
+plotter(subset(f,contrast=='credMen'),subset(b,contrast=='credMen'),c("Some","Most"),range=2,main="C. Credentialism for Men")#
+plotter(subset(f,contrast=='credWomen'),subset(b,contrast=='credWomen'),c("Some","Most"),range=2,main="D. Credentialism for Women")#
+dev.off()
+source('../../shared/libB.R')
+pdf('ml3plots.pdf',width=10,height=10)#
+layout(matrix(c(0,1,2,0,0,5,6,0,0,3,4,0,0,7,8,0),byrow=F,ncol=2),heights=c(.2,1,1,.2,.4,1,1,.2))#
+par(mar=c(0,4,.5,1),cex=1.1,mgp=c(1,1,0))#
+plotter(subset(f,contrast=='site'),subset(b,contrast=='site'),c("Women","Men"),range=2,main="A. Suitability by Site Effects")#
+plotter(subset(f,contrast=='gender'),subset(b,contrast=='gender'),c("Women","Men"),range=2,main="B. Suitability by Gender")#
+plotter(subset(f,contrast=='credMen'),subset(b,contrast=='credMen'),c("Some","Most"),range=2,main="C. Credentialism for Men")#
+plotter(subset(f,contrast=='credWomen'),subset(b,contrast=='credWomen'),c("Some","Most"),range=2,main="D. Credentialism for Women")#
+dev.off()
+library('BayesFactor')#
+rScaleIndv=.3#
+rScaleMean=.5#
+dat=makeDataFrameML3('ML3AllSites.csv')#
+I=max(dat$lab)#
+N=length(dat$lab)#
+Xnu=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xnu[i,dat$lab[i]]=1  #0/1 coded#
+Xgen=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xgen[i,dat$lab[i]]=dat$gender[i]-1.5 #-.5/.5 coded#
+XcredM=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredM[i,dat$lab[i]]=(dat$cred[i]-1)*(dat$gender[i]-1)  #0/1 coded#
+XcredW=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredW[i,dat$lab[i]]=(dat$cred[i]-1)*(1-(dat$gender[i]-1))  #0/1 coded#
+Xgen0=dat$gender-1.5#
+XcredM0=(dat$cred-1)*(dat$gender-1)#
+XcredW0=(dat$cred-1)*(1-(dat$gender-1))#
+#
+Xcred=XcredM+XcredW#
+Xcred0=XcredM0+XcredW0#
+#
+labels=c('L','1g1c','1g','1c','1gManC','1g2c',#
+	'L1g1c','Mg1c','1gMc')#
+bf=1:10#
+#
+bf[1]=nWayAOV(dat$Y,Xnu,gMap=rep(0,I),rscale=rScaleIndv,posterio=F)$bf#
+bf[2]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[6]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[7]=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[8]=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[9]=nWayAOV(dat$Y,cbind(Xcred,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+X=cbind(Xnu,Xgen,XcredM,XcredW,Xgen0,XcredM0,XcredW0)#
+gMap=rep(0:6,c(I,I,I,I,1,1,1))#
+bf[10]=nWayAOV(dat$Y,X,gMap=gMap,rscale=rep(c(rScaleIndv,rScaleMean),c(4,3)))$bf
+source('../../shared/libB.R')
+library('BayesFactor')#
+rScaleIndv=.3#
+rScaleMean=.5#
+dat=makeDataFrameML3('ML3AllSites.csv')#
+I=max(dat$lab)#
+N=length(dat$lab)#
+Xnu=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xnu[i,dat$lab[i]]=1  #0/1 coded#
+Xgen=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xgen[i,dat$lab[i]]=dat$gender[i]-1.5 #-.5/.5 coded#
+XcredM=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredM[i,dat$lab[i]]=(dat$cred[i]-1)*(dat$gender[i]-1)  #0/1 coded#
+XcredW=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredW[i,dat$lab[i]]=(dat$cred[i]-1)*(1-(dat$gender[i]-1))  #0/1 coded#
+Xgen0=dat$gender-1.5#
+XcredM0=(dat$cred-1)*(dat$gender-1)#
+XcredW0=(dat$cred-1)*(1-(dat$gender-1))
+dat=makeDataFrameML3('../../shared/ML3AllSites.csv')
+I=max(dat$lab)#
+N=length(dat$lab)#
+Xnu=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xnu[i,dat$lab[i]]=1  #0/1 coded#
+Xgen=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xgen[i,dat$lab[i]]=dat$gender[i]-1.5 #-.5/.5 coded#
+XcredM=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredM[i,dat$lab[i]]=(dat$cred[i]-1)*(dat$gender[i]-1)  #0/1 coded#
+XcredW=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredW[i,dat$lab[i]]=(dat$cred[i]-1)*(1-(dat$gender[i]-1))  #0/1 coded#
+Xgen0=dat$gender-1.5#
+XcredM0=(dat$cred-1)*(dat$gender-1)#
+XcredW0=(dat$cred-1)*(1-(dat$gender-1))#
+#
+Xcred=XcredM+XcredW#
+Xcred0=XcredM0+XcredW0#
+#
+labels=c('L','1g1c','1g','1c','1gManC','1g2c',#
+	'L1g1c','Mg1c','1gMc')#
+bf=1:10#
+#
+bf[1]=nWayAOV(dat$Y,Xnu,gMap=rep(0,I),rscale=rScaleIndv,posterio=F)$bf#
+bf[2]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[6]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[7]=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[8]=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[9]=nWayAOV(dat$Y,cbind(Xcred,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+X=cbind(Xnu,Xgen,XcredM,XcredW,Xgen0,XcredM0,XcredW0)#
+gMap=rep(0:6,c(I,I,I,I,1,1,1))#
+bf[10]=nWayAOV(dat$Y,X,gMap=gMap,rscale=rep(c(rScaleIndv,rScaleMean),c(4,3)))$bf#
+#
+#positive credibility effect
+bf
+labels
+labels=c('L','1g1c','1g','1c','1gManC','1g2c',#
+	'L1g1c','Mg1c','1gMc','Full')#
+bf=1:10#
+#
+bf[1]=nWayAOV(dat$Y,Xnu,gMap=rep(0,I),rscale=rScaleIndv,posterio=F)$bf#
+bf[2]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[6]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[7]=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[8]=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[9]=nWayAOV(dat$Y,cbind(Xcred,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+X=cbind(Xnu,Xgen,XcredM,XcredW,Xgen0,XcredM0,XcredW0)#
+gMap=rep(0:6,c(I,I,I,I,1,1,1))#
+bf[10]=nWayAOV(dat$Y,X,gMap=gMap,rscale=rep(c(rScaleIndv,rScaleMean),c(4,3)))$bf#
+#
+#positive credibility effect
+bf
+labels
+library(diagram)
+bfall=c(1,bf)
+labAll=c('null',labels)
+bfall=c(1,bf)
+labAll=c('null',labels)
+winner=order(bfall,decreasing=T)[1]
+winner
+labAll[winner]
+bfall=c(1,bf)#
+labAll=c('null',labels)#
+winner=order(bfall,decreasing=T)[1]#
+bfall=bfall/bfall[winner]#
+other=(1:11)[!((1:11) ==winner)]#
+#
+#positive credibility effect#
+library(diagram)#
+M=matrix(nrow=length(labAll),byrow=F,ncol=length(labAll),data=0)#
+for (i in 1:10) M[winner,i]=round(1/bfPlot[other[i]],0)#
+G=plotmat(M,c(3,3,3,1),name=names,curve=0,box.type="circle",box.size=.15,box.prop=.7,box.col=myCol,arr.length=.6,arr.type='triangle',arr.pos=.4,cex=.8)
+G=plotmat(M,c(3,3,3,1),name=names,curve=0,box.type="circle",box.size=.15,box.prop=.7,box.col='blue',arr.length=.6,arr.type='triangle',arr.pos=.4,cex=.8)
+M
+winner
+i
+for (i in 1:10) M[winner,i]=#round(1/bfPlot[other[i]],0)1
+)
+for (i in 1:10) M[winner,i]=1#round(1/bfPlot[other[i]],0)
+M
+G=plotmat(M,c(3,3,3,1),name=names,curve=0,box.type="circle",box.size=.15,box.prop=.7,box.col='blue',arr.length=.6,arr.type='triangle',arr.pos=.4,cex=.8)
+dim(M)
+G=plotmat(M,c(3,3,3,2),name=names,curve=0,box.type="circle",box.size=.15,box.prop=.7,box.col='blue',arr.length=.6,arr.type='triangle',arr.pos=.4,cex=.8)
+G=plotmat(M,c(3,3,3,2),name=names,curve=0,box.type="circle",box.size=.1,box.prop=.7,box.col='blue',arr.length=.6,arr.type='triangle',arr.pos=.4,cex=.8)
+#positive credibility effect#
+library(diagram)#
+M=matrix(nrow=length(labAll),byrow=F,ncol=length(labAll),data=0)#
+#for (i in 1:10) M[winner,i]=1#round(1/bfPlot[other[i]],0)#
+G=plotmat(M,c(3,3,3,2),name=names,curve=0,box.type="circle",box.size=.1,box.prop=.7,box.col='blue',arr.length=.6,arr.type='triangle',arr.pos=.4,cex=.8)
+names=labAll
+M=matrix(nrow=length(labAll),byrow=F,ncol=length(labAll),data=0)
+G=plotmat(M,c(3,3,3,2),name=labAll,curve=0,box.type="circle",box.size=.1,box.prop=.7,box.col='blue',arr.length=.6,arr.type='triangle',arr.pos=.4,cex=.8)
+bfall[other]
+1/exp(bfall[other])
+bfall=c(1,exp(bf))
+labAll=c('null',labels)
+winner=order(bfall,decreasing=T)[1]
+bfall=bfall/bfall[winner]
+other=(1:11)[!((1:11) ==winner)]
+bfall
+1/bfall
+dist=log10(1/bfall)
+dist
+polar.plot
+library('plotrix')
+??polar.plot
+install.packages('plotrix')
+library('plotrix')
+plt.lns <- seq(1, 100, length=500)#
+angles <- seq(0, 5*360, length=500)%%360#
+polar.plot(plt.lns, polar.pos=angles, labels="", rp.type = "polygon")
+?polar.plot
+polar.plot(dist,seq(0,360,length=length(dist)))
+polar.plot(dist,seq(90,360,length=length(dist)),typ='p')
+?polar.plot
+polar.plot(dist,seq(90,360,length=length(dist)),rp.typ='s')
+polar.plot(dist,seq(90,360,length=length(dist)),rp.typ='s',labels="")
+polar.plot(dist,seq(90,360,length=length(dist)),rp.typ='s',labels="",labels.pos="")
+polar.plot(dist,seq(90,360,length=length(dist)),rp.typ='s',labels="",show.grid.labels=F)
+polar.plot(dist,seq(90,360,length=length(dist)),rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F)
+polar.plot(dist,seq(90,360,length=length(dist)),rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bf='lightblue')
+polar.plot(dist,seq(90,360,length=length(dist)),rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg='lightblue')
+polar.plot(dist,seq(90,360,length=length(dist)),rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg='antiquewhite')
+polar.plot(dist,seq(90,360,length=length(dist)),rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg='antiquewhite',grid.col='red')
+polar.plot(dist,seq(90,360,length=length(dist)),rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg='antiquewhite',grid.col='red',point.symbols=LETTERS[1:11])
+polar.plot(dist,seq(90,360,length=length(dist)),rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg='antiquewhite',grid.col='red',point.symbols=c('11','Jeff'))
+polar.plot(dist,seq(90,360,length=length(dist)),rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg='antiquewhite',grid.col='red',point.symbols=LETTERS)
+polar.plot(dist,seq(90,360,length=length(dist)),rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=LETTERS)
+source('../../shared/libB.R')#
+library('BayesFactor')#
+rScaleIndv=.3#
+rScaleMean=.5#
+dat=makeDataFrameML3('../../shared/ML3AllSites.csv')#
+I=max(dat$lab)#
+N=length(dat$lab)#
+Xnu=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xnu[i,dat$lab[i]]=1  #0/1 coded#
+Xgen=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xgen[i,dat$lab[i]]=dat$gender[i]-1.5 #-.5/.5 coded#
+XcredM=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredM[i,dat$lab[i]]=(dat$cred[i]-1)*(dat$gender[i]-1)  #0/1 coded#
+XcredW=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredW[i,dat$lab[i]]=(dat$cred[i]-1)*(1-(dat$gender[i]-1))  #0/1 coded#
+Xgen0=dat$gender-1.5#
+XcredM0=(dat$cred-1)*(dat$gender-1)#
+XcredW0=(dat$cred-1)*(1-(dat$gender-1))#
+#
+Xcred=XcredM+XcredW#
+Xcred0=XcredM0+XcredW0#
+#
+labels=c('N','L','g','c','g+c')#
+#
+#'1g1c','1g','1c','1gManC','1g2c',#
+#	'L1g1c','Mg1c','1gMc','Full')#
+bf=1:5#
+bg[1]=0#
+bf[2]=nWayAOV(dat$Y,Xnu,gMap=rep(0,I),rscale=rScaleIndv,posterio=F)$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf
+bfall=c(1,exp(bf))#
+labAll=c('null',labels)#
+winner=order(bfall,decreasing=T)[1]#
+bfall=bfall/bfall[winner]#
+dist=log10(1/bfall)#
+polar.plot(dist,seq(90,360,length=length(dist)),rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=LETTERS)
+polar.plot(dist,seq(90,360,length=length(dist)),rp.typ='s',labels="",show.grid.labels=T,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=LETTERS)
+polar.plot(dist,seq(90,360,length=length(dist)),rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=LETTERS)
+angle=c(270,180,240,300)
+polar.plot(dist,angel,rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=LETTERS)
+polar.plot(dist,angle,rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=LETTERS)
+bfall=c(1,exp(bf))#
+labAll=c('null',labels)#
+winner=order(bfall,decreasing=T)[1]#
+bfall=bfall/bfall[winner]#
+dist=log10(1/bfall)#
+polar.plot(dist,angle,rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=LETTERS)
+angle=c(270,180,240,300,270)
+labels=c('N','L','g','c','g+c')#
+angle=c(270,180,240,300,270)#
+#'1g1c','1g','1c','1gManC','1g2c',#
+#	'L1g1c','Mg1c','1gMc','Full')#
+bf=1:5#
+bg[1]=0#
+bf[2]=nWayAOV(dat$Y,Xnu,gMap=rep(0,I),rscale=rScaleIndv,posterio=F)$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf
+bfall=c(1,exp(bf))#
+labAll=c('null',labels)#
+winner=order(bfall,decreasing=T)[1]#
+bfall=bfall/bfall[winner]#
+dist=log10(1/bfall)#
+polar.plot(dist,angle,rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=LETTERS)
+bfall=exp(bf)#
+labAll=c('null',labels)#
+winner=order(bfall,decreasing=T)[1]#
+bfall=bfall/bfall[winner]#
+dist=log10(1/bfall)#
+polar.plot(dist,angle,rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=LETTERS)
+labels=c('N','L','g','c','g+c','g+c[m]','g+c[m]+c[w]')#
+angle=c(270,180,240,300,270,30,40)#
+#'1g1c','1g','1c','1gManC','1g2c',#
+#	'L1g1c','Mg1c','1gMc','Full')#
+bf=1:7#
+bg[1]=0#
+bf[2]=nWayAOV(dat$Y,Xnu,gMap=rep(0,I),rscale=rScaleIndv,posterio=F)$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[6]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[7]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf
+bfall=exp(bf)#
+labAll=c('null',labels)#
+winner=order(bfall,decreasing=T)[1]#
+bfall=bfall/bfall[winner]#
+dist=log10(1/bfall)#
+polar.plot(dist,angle,rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=LETTERS)
+symb=c('N','L','G','C','*','m','2')
+polar.plot(dist,angle,rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=symb)
+symb=c('N','L','G','C','X','M','2')
+polar.plot(dist,angle,rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=symb)
+labels=c('N','L','g','c','g+c','g+c[m]','g+c[m]+c[w]','L+g+c','G+c','g+C','Unc')#
+symb=c('N','L','g','c','X','m','2','A','B','C','U')#
+angle=c(270,180,240,300,270,30,40,150,130,120,90)#
+#
+bf=1:11#
+bg[1]=0#
+bf[2]=nWayAOV(dat$Y,Xnu,gMap=rep(0,I),rscale=rScaleIndv,posterio=F)$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[6]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[7]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[8]=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[9]=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[10]=nWayAOV(dat$Y,cbind(Xcred,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+X=cbind(Xnu,Xgen,XcredM,XcredW,Xgen0,XcredM0,XcredW0)#
+gMap=rep(0:6,c(I,I,I,I,1,1,1))#
+bf[11]=nWayAOV(dat$Y,X,gMap=gMap,rscale=rep(c(rScaleIndv,rScaleMean),c(4,3)))$bf#
+bfall=exp(bf)#
+labAll=c('null',labels)#
+winner=order(bfall,decreasing=T)[1]#
+bfall=bfall/bfall[winner]#
+dist=log10(1/bfall)#
+polar.plot(dist,angle,rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=symb)
+polar.plot(dist,angle,rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=symb,legend=T
+)
+legend("upperleft",legend=labels,pch=symb)
+legend("topleft",legend=labels,pch=symb)
+legend("topright",legend=labels,pch=symb,bg='white')
+polar.plot(dist,angle,rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=symb)#
+legend("topright",legend=labels,pch=symb,bg='white')
+labels=c('N','L','g','c','g+c','g+c[m]','g+c[m]+c[w]','L+g+c','G+c','g+C','Unc')#
+symb=c('N','L','g','c','X','m','2','A','B','C','U')#
+angle=c(270,180,240,300,270,0,40,150,130,120,90)#
+#
+bf=1:11#
+bg[1]=0#
+bf[2]=nWayAOV(dat$Y,Xnu,gMap=rep(0,I),rscale=rScaleIndv,posterio=F)$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[6]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[7]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[8]=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[9]=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[10]=nWayAOV(dat$Y,cbind(Xcred,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+X=cbind(Xnu,Xgen,XcredM,XcredW,Xgen0,XcredM0,XcredW0)#
+gMap=rep(0:6,c(I,I,I,I,1,1,1))#
+bf[11]=nWayAOV(dat$Y,X,gMap=gMap,rscale=rep(c(rScaleIndv,rScaleMean),c(4,3)))$bf#
+bfall=exp(bf)#
+labAll=c('null',labels)#
+winner=order(bfall,decreasing=T)[1]#
+bfall=bfall/bfall[winner]#
+dist=log10(1/bfall)#
+polar.plot(dist,angle,rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=symb)#
+legend("topright",legend=labels,pch=symb,bg='white')
+labels=c('Null','Msite','1gender','1cred','1gen+1cred','1gen+1cred[m]','1g+1cred[m]+1cred[w]','L+g+c','G+c','g+C','Unc')#
+symb=c('N','L','g','c','X','m','2','A','B','C','U')#
+angle=c(270,180,240,300,270,0,40,150,130,120,90)#
+#
+bf=1:11#
+bg[1]=0#
+bf[2]=nWayAOV(dat$Y,Xnu,gMap=rep(0,I),rscale=rScaleIndv,posterio=F)$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[6]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[7]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[8]=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[9]=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[10]=nWayAOV(dat$Y,cbind(Xcred,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+X=cbind(Xnu,Xgen,XcredM,XcredW,Xgen0,XcredM0,XcredW0)#
+gMap=rep(0:6,c(I,I,I,I,1,1,1))#
+bf[11]=nWayAOV(dat$Y,X,gMap=gMap,rscale=rep(c(rScaleIndv,rScaleMean),c(4,3)))$bf#
+bfall=exp(bf)#
+labAll=c('null',labels)#
+winner=order(bfall,decreasing=T)[1]#
+bfall=bfall/bfall[winner]#
+dist=log10(1/bfall)#
+polar.plot(dist,angle,rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=symb)#
+legend("topright",legend=labels,pch=symb,bg='white')
+source("/Users/jeff/git/meta-planned/papers/current/ml3bf.R")
+pdf('ml3bf.pdf')#
+source('../../shared/libB.R')#
+library('BayesFactor')#
+rScaleIndv=.3#
+rScaleMean=.5#
+dat=makeDataFrameML3('../../shared/ML3AllSites.csv')#
+I=max(dat$lab)#
+N=length(dat$lab)#
+Xnu=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xnu[i,dat$lab[i]]=1  #0/1 coded#
+Xgen=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xgen[i,dat$lab[i]]=dat$gender[i]-1.5 #-.5/.5 coded#
+XcredM=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredM[i,dat$lab[i]]=(dat$cred[i]-1)*(dat$gender[i]-1)  #0/1 coded#
+XcredW=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredW[i,dat$lab[i]]=(dat$cred[i]-1)*(1-(dat$gender[i]-1))  #0/1 coded#
+Xgen0=dat$gender-1.5#
+XcredM0=(dat$cred-1)*(dat$gender-1)#
+XcredW0=(dat$cred-1)*(1-(dat$gender-1))#
+#
+Xcred=XcredM+XcredW#
+Xcred0=XcredM0+XcredW0#
+#
+labels=c('Null','Msite','1gender','1cred','1gen+1cred','1gen+1cred[m]','1g+1cred[m]+1cred[w]','L+g+c','G+c','g+C','Unconstrained')#
+symb=c('N','L','g','c','X','m','2','A','B','C','U')#
+angle=c(270,180,240,300,270,0,40,150,130,120,90)#
+#
+bf=1:11#
+bf[1]=0#
+bf[2]=nWayAOV(dat$Y,Xnu,gMap=rep(0,I),rscale=rScaleIndv,posterio=F)$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[6]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[7]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[8]=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[9]=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[10]=nWayAOV(dat$Y,cbind(Xcred,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+X=cbind(Xnu,Xgen,XcredM,XcredW,Xgen0,XcredM0,XcredW0)#
+gMap=rep(0:6,c(I,I,I,I,1,1,1))#
+bf[11]=nWayAOV(dat$Y,X,gMap=gMap,rscale=rep(c(rScaleIndv,rScaleMean),c(4,3)))$bf#
+bfall=exp(bf)#
+labAll=c('null',labels)#
+winner=order(bfall,decreasing=T)[1]#
+bfall=bfall/bfall[winner]#
+dist=log10(1/bfall)#
+polar.plot(dist,angle,rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=symb)#
+legend("topright",legend=labels,pch=symb,bg='white')#
+#
+dev.off()
+labels <- month.name[1:12]
+mp <- barplot(1:12, axes = FALSE, axisnames = FALSE)
+text(mp, par(“usr”)[3], labels = labels, srt = 45, adj = c(1.1,1.1), xpd = TRUE, cex=1.2)
+axis(2)
+text(mp, par(“usr”)[3], labels = labels, srt = 45, adj = c(1.1,1.1), xpd = TRUE, cex=1.2)
+text(mp, par('usr')[3], labels = labels, srt = 45, adj = c(1.1,1.1), xpd = TRUE, cex=1.2)
+dist=log10(bfall)
+labels=c('Null','Msite','1gender','1cred','1gen+1cred','1gen+1cred[m]','1g+1cred[m]+1cred[w]','L+g+c','G+c','g+C','Unconstrained')#
+symb=c('N','L','g','c','X','m','2','A','B','C','U')#
+angle=c(270,180,240,300,270,0,40,150,130,120,90)#
+#
+bf=1:11#
+bf[1]=0#
+bf[2]=nWayAOV(dat$Y,Xnu,gMap=rep(0,I),rscale=rScaleIndv,posterio=F)$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[6]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[7]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[8]=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[9]=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[10]=nWayAOV(dat$Y,cbind(Xcred,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+X=cbind(Xnu,Xgen,XcredM,XcredW,Xgen0,XcredM0,XcredW0)#
+gMap=rep(0:6,c(I,I,I,I,1,1,1))#
+bf[11]=nWayAOV(dat$Y,X,gMap=gMap,rscale=rep(c(rScaleIndv,rScaleMean),c(4,3)))$bf#
+bfall=exp(bf)#
+labAll=c('null',labels)#
+winner=order(bfall,decreasing=T)[1]#
+bfall=bfall/bfall[winner]#
+dist=log10(bfall)#
+#polar.plot(dist,angle,rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=symb)#
+#legend("topright",legend=labels,pch=symb,bg='white')#
+mp <- barplot(dist, axes = FALSE, axisnames = FALSE)#
+text(mp, par('usr')[3], labels = labels, srt = 45, adj = c(1.1,1.1), xpd = TRUE, cex=1.2)#
+axis(2)
+bfall=exp(bf)#
+labAll=c('null',labels)#
+winner=order(bfall,decreasing=T)[1]#
+loser=order(bfall,decreasing=F)[1]#
+bfall=bfall/bfall[loser]#
+dist=log10(bfall)
+mp <- barplot(dist, axes = FALSE, axisnames = FALSE)
+text(mp, par('usr')[3], labels = labels, srt = 45, adj = c(1.1,1.1), xpd = TRUE, cex=1.2)
+axis(2)
+dev.off()
+mp <- barplot(dist, axes = FALSE, axisnames = FALSE)#
+text(mp, par('usr')[3], labels = labels, srt = 45, adj = c(1.1,1.1), xpd = TRUE, cex=1.2)#
+axis(2)
+dist=log10(bfall)
+mp <- barplot(dist, axes = FALSE, axisnames = FALSE)
+bfAll
+bfall
+labels=c('Null','Msite','1gender','1cred','1gen+1cred','1gen+1cred[m]','1g+1cred[m]+1cred[w]','L+g+c','G+c','g+C','Unconstrained')#
+symb=c('N','L','g','c','X','m','2','A','B','C','U')#
+angle=c(270,180,240,300,270,0,40,150,130,120,90)#
+#
+bf=1:11#
+bf[1]=0#
+bf[2]=nWayAOV(dat$Y,Xnu,gMap=rep(0,I),rscale=rScaleIndv,posterio=F)$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[6]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[7]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[8]=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[9]=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[10]=nWayAOV(dat$Y,cbind(Xcred,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+X=cbind(Xnu,Xgen,XcredM,XcredW,Xgen0,XcredM0,XcredW0)#
+gMap=rep(0:6,c(I,I,I,I,1,1,1))#
+bf[11]=nWayAOV(dat$Y,X,gMap=gMap,rscale=rep(c(rScaleIndv,rScaleMean),c(4,3)))$bf
+source('../../shared/libB.R')
+library('BayesFactor')
+rScaleIndv=.3#
+rScaleMean=.5#
+dat=makeDataFrameML3('../../shared/ML3AllSites.csv')#
+I=max(dat$lab)#
+N=length(dat$lab)#
+Xnu=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xnu[i,dat$lab[i]]=1  #0/1 coded#
+Xgen=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xgen[i,dat$lab[i]]=dat$gender[i]-1.5 #-.5/.5 coded#
+XcredM=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredM[i,dat$lab[i]]=(dat$cred[i]-1)*(dat$gender[i]-1)  #0/1 coded#
+XcredW=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredW[i,dat$lab[i]]=(dat$cred[i]-1)*(1-(dat$gender[i]-1))  #0/1 coded#
+Xgen0=dat$gender-1.5#
+XcredM0=(dat$cred-1)*(dat$gender-1)#
+XcredW0=(dat$cred-1)*(1-(dat$gender-1))#
+Xcred=XcredM+XcredW#
+Xcred0=XcredM0+XcredW0#
+#
+labels=c('Null','Msite','1gender','1cred','1gen+1cred','1gen+1cred[m]','1g+1cred[m]+1cred[w]','L+g+c','G+c','g+C','Unconstrained')#
+symb=c('N','L','g','c','X','m','2','A','B','C','U')#
+angle=c(270,180,240,300,270,0,40,150,130,120,90)#
+#
+bf=1:11#
+bf[1]=0#
+bf[2]=nWayAOV(dat$Y,Xnu,gMap=rep(0,I),rscale=rScaleIndv,posterio=F)$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[6]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[7]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[8]=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[9]=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[10]=nWayAOV(dat$Y,cbind(Xcred,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+X=cbind(Xnu,Xgen,XcredM,XcredW,Xgen0,XcredM0,XcredW0)#
+gMap=rep(0:6,c(I,I,I,I,1,1,1))#
+bf[11]=nWayAOV(dat$Y,X,gMap=gMap,rscale=rep(c(rScaleIndv,rScaleMean),c(4,3)))$bf
+bf
+bfall=exp(bf)#
+labAll=c('null',labels)#
+winner=order(bfall,decreasing=T)[1]#
+loser=order(bfall,decreasing=F)[1]#
+bfall=bfall/bfall[loser]#
+dist=log10(bfall)#
+#polar.plot(dist,angle,rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=symb)#
+#legend("topright",legend=labels,pch=symb,bg='white')#
+mp <- barplot(dist, axes = FALSE, axisnames = FALSE)#
+text(mp, par('usr')[3], labels = labels, srt = 45, adj = c(1.1,1.1), xpd = TRUE, cex=1.2)#
+axis(2)
+bf
+#pdf('ml3bf.pdf')#
+source('../../shared/libB.R')#
+library('BayesFactor')#
+rScaleIndv=.3#
+rScaleMean=.5#
+dat=makeDataFrameML3('../../shared/ML3AllSites.csv')#
+I=max(dat$lab)#
+N=length(dat$lab)#
+Xnu=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xnu[i,dat$lab[i]]=1  #0/1 coded#
+Xgen=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xgen[i,dat$lab[i]]=dat$gender[i]-1.5 #-.5/.5 coded#
+XcredM=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredM[i,dat$lab[i]]=(dat$cred[i]-1)*(dat$gender[i]-1)  #0/1 coded#
+XcredW=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredW[i,dat$lab[i]]=(dat$cred[i]-1)*(1-(dat$gender[i]-1))  #0/1 coded#
+Xgen0=dat$gender-1.5#
+XcredM0=(dat$cred-1)*(dat$gender-1)#
+XcredW0=(dat$cred-1)*(1-(dat$gender-1))#
+Xcred=XcredM+XcredW#
+Xcred0=XcredM0+XcredW0
+labels=c('Null','Msite','1gender','1cred','1gen+1cred','1gen+1cred[m]','1g+1cred[m]+1cred[w]','L+g+c','G+c','g+C','Unconstrained')#
+symb=c('N','L','g','c','X','m','2','A','B','C','U')#
+angle=c(270,180,240,300,270,0,40,150,130,120,90)#
+#
+bf=1:11#
+bf[1]=0#
+bf[2]=nWayAOV(dat$Y,Xnu,gMap=rep(0,I),rscale=rScaleIndv,posterio=F)$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[6]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[7]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[8]=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[9]=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[10]=nWayAOV(dat$Y,cbind(Xcred,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+X=cbind(Xnu,Xgen,XcredM,XcredW,Xgen0,XcredM0,XcredW0)#
+gMap=rep(0:6,c(I,I,I,I,1,1,1))#
+bf[11]=nWayAOV(dat$Y,X,gMap=gMap,rscale=rep(c(rScaleIndv,rScaleMean),c(4,3)))$bf
+bf
+#pdf('ml3bf.pdf')#
+source('../../shared/libB.R')#
+library('BayesFactor')#
+rScaleIndv=.3#
+rScaleMean=.5#
+dat=makeDataFrameML3('../../shared/ML3AllSites.csv')#
+I=max(dat$lab)#
+N=length(dat$lab)#
+Xnu=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xnu[i,dat$lab[i]]=1  #0/1 coded#
+Xgen=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xgen[i,dat$lab[i]]=dat$gender[i]-1.5 #-.5/.5 coded#
+XcredM=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredM[i,dat$lab[i]]=(dat$cred[i]-1)*(dat$gender[i]-1)  #0/1 coded#
+XcredW=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredW[i,dat$lab[i]]=(dat$cred[i]-1)*(1-(dat$gender[i]-1))  #0/1 coded#
+Xgen0=dat$gender-1.5#
+XcredM0=(dat$cred-1)*(dat$gender-1)#
+XcredW0=(dat$cred-1)*(1-(dat$gender-1))#
+Xcred=XcredM+XcredW#
+Xcred0=XcredM0+XcredW0#
+#
+labels=c('Null','Msite','1gender','1cred','1gen+1cred','1gen+1cred[m]','1g+1cred[m]+1cred[w]','L+g+c','G+c','g+C','Unconstrained')#
+symb=c('N','L','g','c','X','m','2','A','B','C','U')#
+angle=c(270,180,240,300,270,0,40,150,130,120,90)#
+#
+bf=1:11#
+bf[1]=0#
+bf[2]=nWayAOV(dat$Y,Xnu,gMap=rep(0,I),rscale=rScaleIndv,posterio=F)$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[6]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[7]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[8]=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[9]=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[10]=nWayAOV(dat$Y,cbind(Xcred,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+X=cbind(Xnu,Xgen,XcredM,XcredW,Xgen0,XcredM0,XcredW0)#
+gMap=rep(0:6,c(I,I,I,I,1,1,1))#
+bf[11]=nWayAOV(dat$Y,X,gMap=gMap,rscale=rep(c(rScaleIndv,rScaleMean),c(4,3)))$bf#
+bfall=exp(bf)#
+labAll=c('null',labels)#
+winner=order(bfall,decreasing=T)[1]#
+loser=order(bfall,decreasing=F)[1]#
+bfall=bfall/bfall[loser]#
+dist=log10(bfall)#
+#polar.plot(dist,angle,rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=symb)#
+#legend("topright",legend=labels,pch=symb,bg='white')#
+mp <- barplot(dist, axes = FALSE, axisnames = FALSE)#
+text(mp, par('usr')[3], labels = labels, srt = 45, adj = c(1.1,1.1), xpd = TRUE, cex=1.2)#
+axis(2)#
+#
+#d
+bf
+#pdf('ml3bf.pdf')#
+source('../../shared/libB.R')#
+library('BayesFactor')#
+rScaleIndv=.3#
+rScaleMean=.5#
+dat=makeDataFrameML3('../../shared/ML3AllSites.csv')#
+I=max(dat$lab)#
+N=length(dat$lab)#
+Xnu=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xnu[i,dat$lab[i]]=1  #0/1 coded#
+Xgen=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xgen[i,dat$lab[i]]=dat$gender[i]-1.5 #-.5/.5 coded#
+XcredM=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredM[i,dat$lab[i]]=(dat$cred[i]-1)*(dat$gender[i]-1)  #0/1 coded#
+XcredW=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredW[i,dat$lab[i]]=(dat$cred[i]-1)*(1-(dat$gender[i]-1))  #0/1 coded#
+Xgen0=dat$gender-1.5#
+XcredM0=(dat$cred-1)*(dat$gender-1)#
+XcredW0=(dat$cred-1)*(1-(dat$gender-1))#
+Xcred=XcredM+XcredW#
+Xcred0=XcredM0+XcredW0#
+#
+labels=c('Null','Msite','1gender','1cred','1gen+1cred','1gen+1cred[m]','1g+1cred[m]+1cred[w]','L+g+c','G+c','g+C','Unconstrained')#
+symb=c('N','L','g','c','X','m','2','A','B','C','U')#
+angle=c(270,180,240,300,270,0,40,150,130,120,90)#
+#
+bf=1:11#
+bf[1]=0#
+bf[2]=nWayAOV(dat$Y,Xnu,gMap=rep(0,I),rscale=rScaleIndv,posterio=F)$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[6]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[7]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[8]=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[9]=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+bf[10]=nWayAOV(dat$Y,cbind(Xcred,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+X=cbind(Xnu,Xgen,XcredM,XcredW,Xgen0,XcredM0,XcredW0)#
+gMap=rep(0:6,c(I,I,I,I,1,1,1))#
+bf[11]=nWayAOV(dat$Y,X,gMap=gMap,rscale=rep(c(rScaleIndv,rScaleMean),c(4,3)))$bf#
+bfall=exp(bf)#
+labAll=c('null',labels)#
+winner=order(bfall,decreasing=T)[1]#
+loser=order(bfall,decreasing=F)[1]#
+bfall=bfall/bfall[loser]#
+dist=log10(bfall)#
+#polar.plot(dist,angle,rp.typ='s',labels="",show.grid.labels=F,show.radial.grid=F,grid.bg=rgb(1,0,0,.1),grid.col=rgb(1,0,0,.1),point.symbols=symb)#
+#legend("topright",legend=labels,pch=symb,bg='white')#
+mp <- barplot(dist, axes = FALSE, axisnames = FALSE)#
+text(mp, par('usr')[3], labels = labels, srt = 45, adj = c(1.1,1.1), xpd = TRUE, cex=1.2)#
+axis(2)#
+#
+#dev.off()
+#pdf('ml3bf.pdf')#
+source('../../shared/libB.R')#
+library('BayesFactor')#
+rScaleIndv=.3#
+rScaleMean=.5#
+dat=makeDataFrameML3('../../shared/ML3AllSites.csv')#
+I=max(dat$lab)#
+N=length(dat$lab)#
+Xnu=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xnu[i,dat$lab[i]]=1  #0/1 coded#
+Xgen=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xgen[i,dat$lab[i]]=dat$gender[i]-1.5 #-.5/.5 coded#
+XcredM=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredM[i,dat$lab[i]]=(dat$cred[i]-1)*(dat$gender[i]-1)  #0/1 coded#
+XcredW=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredW[i,dat$lab[i]]=(dat$cred[i]-1)*(1-(dat$gender[i]-1))  #0/1 coded#
+Xgen0=dat$gender-1.5#
+XcredM0=(dat$cred-1)*(dat$gender-1)#
+XcredW0=(dat$cred-1)*(1-(dat$gender-1))#
+Xcred=XcredM+XcredW#
+Xcred0=XcredM0+XcredW0#
+#
+labels=c(#
+	'Common Gender + Common Credential',#
+	'Common Gender + Common Men Credential',#
+	'Common Gender + Common 2 Credentials')#
+#
+bf=1:length(labels)#
+bf[1]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[2]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf
+bf
+labels=c(#
+	'Common Gender + Common Credential',#
+	'Common Gender + Common Men Credential',#
+	'Common Gender + Common 2 Credentials',#
+	'Common Gender',#
+	'Commen Credential',)#
+#
+bf=1:length(labels)#
+bf[1]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[2]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf
+bf
+labels
+labels=c(#
+	'Common Gender + Common Credential',#
+	'Common Gender + Common Men Credential',#
+	'Common Gender + Common 2 Credentials',#
+	'Common Gender',#
+	'Commen Credential')#
+#
+bf=1:length(labels)#
+bf[1]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[2]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf
+labels
+bf
+cbind(labels,bf)
+sampSite=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)),posterior=T)
+sampSite[1,]
+I
+post.pos=mean(apply(sampSite[,1]+sampSite[,1+(1:I)]>0,1,mean)==I)
+post.pos
+sampSite[,1]+sampSite[,1+(1:I)]
+sampSite[,1]+sampSite[,1+(1:I)]>0
+post.pos=mean(apply(sampSite[,1]+sampSite[,1+(1:I)]>0,1,mean)==1)
+post.pos
+library('MCMCpack')
+M=1000000
+mn=rcauchy(M,0,rScaleMean)
+s2=rinvgamma(M,.5,.5*rScaleIndv^2)
+prior=matrix(nrow=M,ncol=I)#
+for (m in 1:M){prior[,m]=rnorm(I,mn,sqrt(s2))}
+for (m in 1:M){prior[,m]=rnorm(I,mn[m],sqrt(s2[m]))}
+m
+for (m in 1:M){prior[m,]=rnorm(I,mn[m],sqrt(s2[m]))}
+prior.pos=mean(apply(prior>0,1,mean)==1)
+prior.pos
+library('MCMCpack')#
+M=1000#
+mn=rcauchy(M,0,rScaleMean)#
+s2=rinvgamma(M,.5,.5*rScaleIndv^2)#
+count=0#
+for (m in 1:M){#
+	prior=rnorm(I,mn[m],sqrt(s2[m]))#
+	if (mean(prior>0)==1) count=count+1}
+count
+#pdf('ml3bf.pdf')#
+source('../../shared/libB.R')#
+library('BayesFactor')#
+rScaleIndv=.3#
+rScaleMean=.5#
+dat=makeDataFrameML3('../../shared/ML3AllSites.csv')#
+I=max(dat$lab)#
+N=length(dat$lab)#
+Xnu=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xnu[i,dat$lab[i]]=1  #0/1 coded#
+Xgen=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) Xgen[i,dat$lab[i]]=dat$gender[i]-1.5 #-.5/.5 coded#
+XcredM=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredM[i,dat$lab[i]]=(dat$cred[i]-1)*(dat$gender[i]-1)  #0/1 coded#
+XcredW=matrix(0,ncol=I,nrow=N)#
+for (i in 1:N) XcredW[i,dat$lab[i]]=(dat$cred[i]-1)*(1-(dat$gender[i]-1))  #0/1 coded#
+Xgen0=dat$gender-1.5#
+XcredM0=(dat$cred-1)*(dat$gender-1)#
+XcredW0=(dat$cred-1)*(1-(dat$gender-1))#
+Xcred=XcredM+XcredW#
+Xcred0=XcredM0+XcredW0#
+#
+#prior probability#
+library('MCMCpack')#
+M=100000#
+mn=rcauchy(M,0,rScaleMean)#
+s2=rinvgamma(M,.5,.5*rScaleIndv^2)#
+count=0#
+for (m in 1:M){#
+	prior=rnorm(I,mn[m],sqrt(s2[m]))#
+	if (mean(prior>0)==1) count=count+1}#
+prior.pos=count/M#
+labels=c(#
+	'Common Site + Common Gender + Common Credential',#
+	'Common Site + Common Gender + Common Men Credential',#
+	'Common Site + Common Gender + Common 2 Credentials',#
+	'Common Site + Common Gender',#
+	'Common Site + Commen Credential',#
+	'Positive Site + Common Gender + Common Credential',#
+	'Unconstrained Site + Common Gender + Common Credential')#
+#
+bf=1:length(labels)#
+bf[1]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[2]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+#
+#site intercept effects#
+bf[7]=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+sampSite=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)),posterior=T)#
+post.pos=mean(apply(sampSite[,1]+sampSite[,1+(1:I)]>0,1,mean)==1)#
+bf[6]=bf[7]*post.pos/prior.pos
+bf
+bf[6]=bf[7]+log(post.pos)-log(prior.pos)
+bf
+exp(bf)
+round(exp(bf-bf[1])
+)
+round(exp(bf-bf[1]),2)
+round(1/exp(bf-bf[1]),2)
+bf[7]=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+samp=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)),posterior=T)#
+post.pos=mean(apply(samp[,1]+samp[,1+(1:I)]>0,1,mean)==1)#
+bf[6]=bf[7]+log(post.pos)-log(prior.pos)
+bf
+samp=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)),posterior=T)
+samp
+samp[1,]
+post.pos=mean(apply(samp[,1+(I+1)]+samp[,1+(1:I)]>0,1,mean)==1)
+post.ps
+post.pos
+labels=c(#
+	'Common Site + Common Gender + Common Credential',#
+	'Common Site + Common Gender + Common Men Credential',#
+	'Common Site + Common Gender + Common 2 Credentials',#
+	'Common Site + Common Gender',#
+	'Common Site + Commen Credential',#
+	'Positive Site + Common Gender + Common Credential',#
+	'Unconstrained Site + Common Gender + Common Credential',#
+	'Common Site + Positive Gender + Common Credential')
+bf=1:length(labels)#
+bf[1]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[2]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+#
+#site intercept effects#
+bf[7]=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+samp=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)),posterior=T)#
+post.pos=mean(apply(samp[,1]+samp[,1+(1:I)]>0,1,mean)==1)#
+bf[6]=bf[7]+log(post.pos)-log(prior.pos)#
+#
+#gender effects#
+bf[9]=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+samp=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)),posterior=T)#
+post.pos=mean(apply(samp[,1+(I+1)]+samp[,1+(1:I)]>0,1,mean)==1)#
+bf[8]=bf[9]+log(post.pos)-log(prior.pos)
+bf
+labels=c(#
+	'Common Site + Common Gender + Common Credential',#
+	'Common Site + Common Gender + Common Men Credential',#
+	'Common Site + Common Gender + Common 2 Credentials',#
+	'Common Site + Common Gender' ,#
+	'Common Site + Commen Credential',#
+	'Positive Site + Common Gender + Common Credential',#
+	'Unconstrained Site + Common Gender + Common Credential',#
+	'Common Site + Positive Gender + Common Credential',#
+	'Common Site + Common Gender + Positive Credential',#
+	'Common Site + Common Gender + Unconstrained Credential',#
+	)
+bf=1:length(labels)#
+bf[1]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[2]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+#
+#site intercept effects#
+bf[7]=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+samp=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)),posterior=T)#
+post.pos=mean(apply(samp[,1]+samp[,1+(1:I)]>0,1,mean)==1)#
+bf[6]=bf[7]+log(post.pos)-log(prior.pos)#
+#
+#gender effects#
+bf[9]=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+samp=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)),posterior=T)#
+post.pos=mean(apply(samp[,1+(I+1)]+samp[,1+(1:I)]>0,1,mean)==1)#
+bf[8]=bf[9]+log(post.pos)-log(prior.pos)#
+#
+#credential effects#
+bf[11]=nWayAOV(dat$Y,cbind(Xcred,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+samp=nWayAOV(dat$Y,cbind(Xcred,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)),posterior=T)#
+post.pos=mean(apply(samp[,1+(I+2)]+samp[,1+(1:I)]>0,1,mean)==1)#
+bf[10]=bf[11]+log(post.pos)-log(prior.pos)
+bf
+post.pos
+post.pos=max(mean(apply(samp[,1+(I+2)]+samp[,1+(1:I)]>0,1,mean)==1),(1/2*M))
+bf[10]=bf[11]+log(post.pos)-log(prior.pos)
+bf
+mean(apply(samp[,1+(I+2)]+samp[,1+(1:I)]>0,1,mean)==1)
+post.pos=max(mean(apply(samp[,1+(I+2)]+samp[,1+(1:I)]>0,1,mean)==1),(1/(2*M)))
+post.pos
+bf[10]=bf[11]+log(post.pos)-log(prior.pos)
+bf
+post.pos=max(mean(apply(samp[,1+(I+2)]+samp[,1+(1:I)]>0,1,mean)==1),(1/(20000)))
+bf[10]=bf[11]+log(post.pos)-log(prior.pos)
+bf
+post.pos=mean(apply(samp[,1+(I+2)]+samp[,1+(1:I)]>0,1,mean)==1)
+bf[10]=bf[11]+log(post.pos)-log(prior.pos)
+bf
+printBF=round(1/exp(bf-bf[1]),1)
+printBF
+printBF=paste('1-to-',round(1/exp(bf-bf[1]),1),sep='')
+printBF
+printBF=paste('1-to-',round(1/exp(bf-bf[1]),1),sep='')
+labels
+source('../../shared/libB.R')
+library('BayesFactor')
+rScaleIndv=.3
+rScaleMean=.5
+dat=makeDataFrameML3('../../shared/ML3AllSites.csv')
+I=max(dat$lab)
+N=length(dat$lab)
+Xnu=matrix(0,ncol=I,nrow=N)
+for (i in 1:N) Xnu[i,dat$lab[i]]=1  #0/1 coded
+Xgen=matrix(0,ncol=I,nrow=N)
+for (i in 1:N) Xgen[i,dat$lab[i]]=dat$gender[i]-1.5 #-.5/.5 coded
+XcredM=matrix(0,ncol=I,nrow=N)
+for (i in 1:N) XcredM[i,dat$lab[i]]=(dat$cred[i]-1)*(dat$gender[i]-1)  #0/1 coded
+XcredW=matrix(0,ncol=I,nrow=N)
+for (i in 1:N) XcredW[i,dat$lab[i]]=(dat$cred[i]-1)*(1-(dat$gender[i]-1))  #0/1 coded
+Xgen0=dat$gender-1.5
+XcredM0=(dat$cred-1)*(dat$gender-1)
+XcredW0=(dat$cred-1)*(1-(dat$gender-1))
+Xcred=XcredM+XcredW
+Xcred0=XcredM0+XcredW0
+#prior probability#
+library('MCMCpack')#
+M=100000#
+mn=rcauchy(M,0,rScaleMean)#
+s2=rinvgamma(M,.5,.5*rScaleIndv^2)#
+count=0#
+for (m in 1:M){#
+	prior=rnorm(I,mn[m],sqrt(s2[m]))#
+	if (mean(prior>0)==1) count=count+1}#
+prior.pos=count/M
+labels=c(#
+	'Common Site + Common Gender + Common Credential',#
+	'Common Site + Common Gender + Common Men Credential',#
+	'Common Site + Common Gender + Common 2 Credentials',#
+	'Common Site + Common Gender' ,#
+	'Common Site + Commen Credential',#
+	'Positive Site + Common Gender + Common Credential',#
+	'Unconstrained Site + Common Gender + Common Credential',#
+	'Common Site + Positive Gender + Common Credential',#
+	'Common Site + Common Gender + Positive Credential',#
+	'Common Site + Common Gender + Unconstrained Credential',#
+	'Comon Site + Unconstrained Credential + Common Credential'#
+	)
+length(labels)
+bf=1:length(labels)#
+bf[1]=nWayAOV(dat$Y,cbind(Xgen0,Xcred0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[2]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0),gMap=rep(0:1,c(1,1)),rscale=rep(rScaleMean,2))$bf#
+bf[3]=nWayAOV(dat$Y,cbind(Xgen0,XcredM0,XcredW0),gMap=rep(0:2,c(1,1,1)),rscale=rep(rScaleMean,3))$bf#
+bf[4]=nWayAOV(dat$Y,cbind(Xgen0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf#
+bf[5]=nWayAOV(dat$Y,cbind(Xcred0),gMap=rep(0,1),rscale=rep(rScaleMean,1))$bf
+bf
+bf[7]=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+samp=nWayAOV(dat$Y,cbind(Xnu,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)),posterior=T)#
+post.pos=mean(apply(samp[,1]+samp[,1+(1:I)]>0,1,mean)==1)#
+bf[6]=bf[7]+log(post.pos)-log(prior.pos)
+bf
+bf[9]=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+samp=nWayAOV(dat$Y,cbind(Xgen,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)),posterior=T)#
+post.pos=mean(apply(samp[,1+(I+1)]+samp[,1+(1:I)]>0,1,mean)==1)#
+bf[8]=bf[9]+log(post.pos)-log(prior.pos)
+bf
+bf[11]=nWayAOV(dat$Y,cbind(Xcred,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)))$bf#
+samp=nWayAOV(dat$Y,cbind(Xcred,Xgen0,Xcred0),gMap=rep(0:2,c(I,1,1)),rscale=rep(c(rScaleIndv,rScaleMean),c(1,2)),posterior=T)#
+post.pos=mean(apply(samp[,1+(I+2)]+samp[,1+(1:I)]>0,1,mean)==1)#
+bf[10]=bf[11]+log(post.pos)-log(prior.pos)
+bf
+printBF=paste('1-to-',round(1/exp(bf-bf[1]),1),sep='')
+print(BG)
+print(BF)
+printBF
+labels
+data.frame(labels,printBF)

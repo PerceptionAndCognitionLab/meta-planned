@@ -1,0 +1,62 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+\begin{center}
+\begin{threeparttable}
+\caption{\label{tab:sens}}
+\begin{tabular}{lllll}
+\toprule
+Mean & \multicolumn{1}{c}{SD} & \multicolumn{1}{c}{Null-to-Common} & \multicolumn{1}{c}{Null-to-Unconstrained} & \multicolumn{1}{c}{Null-to-Positive}\\
+\midrule
+0.40 & 0.24 & 9.7-to-1 & 245.4-to-1 & 112582.1-to-1\\
+0.40 & 0.40 & 11.4-to-1 & 1978.8-to-1 & 846249.6-to-1\\
+0.40 & 0.12 & 11.3-to-1 & 54.3-to-1 & 1523.1-to-1\\
+0.80 & 0.48 & 22.3-to-1 & 10197.8-to-1 & 9121966.1-to-1\\
+0.80 & 0.80 & 11.6-to-1 & 371926.8-to-1 & Inf-to-1\\
+0.80 & 0.24 & 22.2-to-1 & 505.5-to-1 & 135461.1-to-1\\
+0.20 & 0.12 & 5.8-to-1 & 28.4-to-1 & 514.8-to-1\\
+0.20 & 0.20 & 5.9-to-1 & 63.7-to-1 & 6317.6-to-1\\
+0.20 & 0.06 & 5.6-to-1 & 13-to-1 & 96.1-to-1\\
+\bottomrule
+\addlinespace
+\end{tabular}
+\begin{tablenotes}[para]
+\textit{Note.} Infinite values exceed our precision
+\end{tablenotes}
+\end{threeparttable}
+\end{center}
+\end{table*}
+\efloatseparator
+ 
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+\begin{center}
+\begin{threeparttable}
+\caption{\label{tab:ml3BF}}
+\begin{tabular}{ll}
+\toprule
+Model & \multicolumn{1}{c}{Bayes Factor}\\
+\midrule
+Common Site + Common Gender + Common Credential & 1-to-1\\
+Common Site + Common Gender + Common Men Credential & 1-to-51.2\\
+Common Site + Common Gender + Common 2 Credentials & 1-to-6.4\\
+Common Site + Common Gender & 1-to-105.1\\
+Common Site + Commen Credential & 1-to-27881.4\\
+Positive Site + Common Gender + Common Credential & 1-to-0.6\\
+Unconstrained Site + Common Gender + Common Credential & 1-to-3.1\\
+Common Site + Positive Gender + Common Credential & 1-to-4.7\\
+Common Site + Common Gender + Positive Credential & 1-to-12.3\\
+Common Site + Common Gender + Unconstrained Credential & 1-to-Inf\\
+Comon Site + Unconstrained Credential + Common Credential & 1-to-3.5\\
+\bottomrule
+\addlinespace
+\end{tabular}
+\begin{tablenotes}[para]
+\textit{Note.} Infinite values exceed our machine precision of \$10\textasciicircum{}304\$
+\end{tablenotes}
+\end{threeparttable}
+\end{center}
+\end{table*}
+\efloatseparator
+ 
