@@ -124,8 +124,8 @@ Meta-Analysis}
 
   \author{Jeffrey N. Rouder\textsuperscript{1,2}, Julia M. Haaf\textsuperscript{2}, Clintin Davis-Stober\textsuperscript{2}, \& Joseph Hilgard\textsuperscript{3}}
 
-  % \def\affdep{{"", "", "", ""}}%
-  % \def\affcity{{"", "", "", ""}}%
+  \def\affdep{{"", "", "", ""}}%
+  \def\affcity{{"", "", "", ""}}%
 
   \affiliation{
     \vspace{0.5cm}
@@ -134,36 +134,33 @@ Meta-Analysis}
           \textsuperscript{3} Illinois State University  }
 
   \authornote{
+    \newcounter{author}
     This paper is developed in RMarkdown with integrated text and code for
     analysis and figures. An executable source file that downloads the data,
     performs all analyses, and typesets the manuscript may be found at
     \href{https://github.com/PerceptionAndCognitionLab/meta-planned}{github.com/PerceptionAndCognitionLab/meta-planned}.
     Version 2.
-    
-    Correspondence concerning this article should be addressed to Jeffrey N.
-    Rouder, 210 McAlester Hall. E-mail:
-    \href{mailto:rouderj@missouri.edu}{\nolinkurl{rouderj@missouri.edu}}
-  }
+
+                      Correspondence concerning this article should be addressed to Jeffrey N. Rouder, 210 McAlester Hall. E-mail: \href{mailto:rouderj@missouri.edu}{\nolinkurl{rouderj@missouri.edu}}
+                                              }
 
 
-  \abstract{Most meta-analyses focus on meta-analytic means, testing whether they
-are significantly different from zero and how they depend on covariates.
-This mean is difficult to defend as a construct because the underlying
-distribution of studies reflects many factors such as how we choose to
-run experiments. We argue that the fundamental questions of
-meta-analysis should not be about the aggregated mean; instead, one
-should ask which relations are stable across all the studies. In a
-typical meta-analysis, there is a preferred or hypothesized direction
-(e.g., that violent video games increase, rather than decrease,
-agressive behavior). We ask whether all studies in a meta-analysis have
-true effects in a common direction. If so, this is an example of a
-stable relation across all the studies. We propose four models: (i) all
-studies are truly null; (ii) all studies share a single true nonzero
-effect; (iii) studies differ, but all true effects are in the same
-direction; and (iv) some study effects are truly positive while others
-are truly negative. We develop Bayes factor model comparison for these
-models and apply them to four extant meta-analyses to show their
-usefulness.}
+  \abstract{Most meta-analyses focus on the behavior of meta-analytic means. In many
+cases, however, this mean is difficult to defend as a construct because
+the underlying distribution of studies reflects many factors including
+how we as researchers choose to design studies. We present an
+alternative goal for meta-analysis. The analyst may ask about relations
+that are stable across all the studies. In a typical meta-analysis,
+there is a hypothesized direction (e.g., that violent video games
+increase, rather than decrease, agressive behavior). We ask whether all
+studies in a meta-analysis have true effects in the hypothesized
+direction. If so, this is an example of a stable relation across all the
+studies. We propose four models: (i) all studies are truly null; (ii)
+all studies share a single true nonzero effect; (iii) studies differ,
+but all true effects are in the same direction; and (iv) some study
+effects are truly positive while others are truly negative. We develop
+Bayes factor model comparison for these models and apply them to four
+extant meta-analyses to show their usefulness.}
   \keywords{meta-analysis, random-effects meta-analysis, Bayesian models, mixed
 models, order-constrained inference \\
 
@@ -187,11 +184,8 @@ models, order-constrained inference \\
 \newtheorem{proposition}{Proposition}
 \theoremstyle{definition}
 \newtheorem{example}{Example}
-\theoremstyle{definition}
-\newtheorem{exercise}{Exercise}
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
-\newtheorem*{solution}{Solution}
 \begin{document}
 
 \maketitle
@@ -225,7 +219,7 @@ and assume that the observations come from a common distribution, say
 the normal distribution, the sample mean serves as an estimator of
 another abstraction, a parameter. For the normal, this parameter is
 called the true mean. Although we use the term \enquote{true,} we should
-be careful to remember that it is not real quantity---rather, it is a
+be careful to remember that it is not a real quantity---rather, it is a
 mathematical abstraction.\footnote{Some people use the term population
   mean rather than true mean. The population, as commonly used, is an
   abstraction. For example, the population of all people is an abstract
@@ -331,17 +325,17 @@ Whereas classical tests are focused on a single order constraint---that
 of the grand mean, a slope, or a variance---the needed tests here are
 about whether many order constraints hold simultaneously. There is a
 classical literature on order constraints and the topic is conceptually
-complicated ({\textbf{???}}; Robertson, Wright, \& Dykstra, 1988). To
-our knowledge, there is no classical solution to the \enquote{does every
-study show a true positive effect} hypothesis in a hierarchical context
-appropriate for meta-analysis.
+complicated (Robertson, Wright, \& Dykstra, 1988; Silvapulle \& Sen,
+2011). To our knowledge, there is no classical solution to the
+\enquote{does every study show a true positive effect} hypothesis in a
+hierarchical context appropriate for meta-analysis.
 
 Although the problem appears difficult for classical testing, it is
 straightforward in the Bayesian framework. Bayesian analysis has become
 popular in part because it makes difficult statistical problems
-straighforward. Assessing multiple order constraints simultaneously
+straightforward. Assessing multiple order constraints simultaneously
 follows fairly readily from Bayes rule (Gelfand, Smith, \& Lee, 1992;
-Klugkist, Kato, \& Hoijtink, 2005). There are many reasons to adopt
+Klugkist, Laudy, \& Hoijtink, 2005). There are many reasons to adopt
 Bayesian analysis; in this case none is more important than it is the
 only analysis we know that provides a solution to the \enquote{does
 every study} problem.
@@ -352,7 +346,7 @@ the process illustrate a variety of patterns in the literature. One
 constraint we document is a strong null where all studies have a
 zero-valued true effect. We find this constraint holds in a reanalysis
 of Wagenmakers et al. (2016). These authors performed a registered
-replication of Strack, Martin, and Stepper (1988), who demonstrated a
+replication of Strack, Martin, \& Stepper (1988), who demonstrated a
 well-cited instance of embodied cognition. A second constraint we
 document is one where all studies in the meta-analysis are best
 described as having one true effect. We document this common effect with
@@ -361,12 +355,12 @@ authors replicated a social-psychological phenomenon called moral
 credentialism (Monin \& Miller, 2001) where prejudice is expressed to a
 greater degree after participants reject overtly sexist statements. A
 third constraint we document is one where true effects may differ but
-all are positive. This case comes from a reanalysis of Haaf and Rouder
+all are positive. This case comes from a reanalysis of Haaf \& Rouder
 (2017), who reported the results of three extant Stroop experiments.
-Finally, we document unconstrained variability across studies. This is
-demonstrated by a reanalysis of Corker, Donnellan, Kim, Schwartz, and
-Zamboanga (2017), who studied how Big Five personality characteristics
-varied across different university populations.
+Finally, we document variability across sites. This is demonstrated by a
+reanalysis of Corker, Donnellan, Kim, Schwartz, \& Zamboanga (2017), who
+studied how Big Five personality characteristics varied across different
+universities.
 
 \section{Constraints Among True
 Effects}\label{constraints-among-true-effects}
@@ -374,9 +368,14 @@ Effects}\label{constraints-among-true-effects}
 \begin{figure}[htbp]
 \centering
 \includegraphics{p_files/figure-latex/pred-1.pdf}
-\caption{\label{fig:pred}The four meta-analytic models as shown for two
-hypothetical studies. The left column shows the specifications; the
-right column shows the resulting predictions on observed effects.}
+\caption{\label{fig:pred}The four meta-analytic models as shown as bivariate
+distributions across two hypothetical studies. The left column shows
+model specifications. In each panel, the x-axis is the true value of the
+effect for Study 1; the y-axis is the true value of the effect for Study
+2. The plots show the bivariate distributions of true study effects and
+darker points correspond to greater density. The right column shows the
+resulting predictions on observed effects. The format of the plots are
+the same as in the left column.}
 \end{figure}
 
 Our main goal is to focus on constraints among the constituent
@@ -447,7 +446,7 @@ effects} model, and with it we constraint \(\theta_i>0\). For example,
 \theta_i \sim \mbox{Normal}_+(\mu_\theta,\sigma^2_\theta),
 \] where \(\mbox{Normal}_+\) denotes a normal distribution truncated
 below at zero. Here \(\mu_\theta\) and \(\sigma^2_\theta\) are
-population parameter that describe the distribution of effect sizes
+population parameters that describe the distribution of effect sizes
 across studies. Figure~\ref{fig:pred}C shows this model. There is only
 mass distributed across the quadrant of joint positive effects. Prior
 settings are needed for \(\mu_\theta\) and \(\sigma^2_\theta\), and we
@@ -522,15 +521,14 @@ modeling.
 
 We use the unconstrained model, defined above, for estimating true study
 effects.\footnote{The unconstrained model is a linear mixed model, and
-  this class of models have been studied extensively ({\textbf{???}};
-  Gelman, Carlin, Stern, \& Rubin, 2004). We use conjugate priors so
-  that estimation may proceed through Gibbs sampling, and our setup is
-  documented in Rouder, Morey, Speckman, and Province (2012) and Haaf
-  and Rouder (2017). Estimation is robust to prior settings in the sets
-  we examine. Where prior settings matter most is for Bayes factor
-  computations, and these effects are discussed subsequently.}
-
-This choice is well suited for estimating a single, best value for each
+  this class of models have been studied extensively (Gelman, Carlin,
+  Stern, \& Rubin, 2004; Jackman, 2009). We use conjugate priors so that
+  estimation may proceed through Gibbs sampling, and our setup is
+  documented in Rouder, Morey, Speckman, \& Province (2012) and Haaf \&
+  Rouder (2017). Estimation is robust to prior settings in the sets we
+  examine. Where prior settings matter most is for Bayes factor
+  computations, and these effects are discussed subsequently.} This
+choice is well suited for estimating a single, best value for each
 study. Figure~\ref{fig:wagEst}B shows the hierarchical estimates from
 the unconstrained model (filled circles) for Wagenmakers et al.'s data
 along with associated 95\% credible intervals. Notice that the
@@ -541,10 +539,8 @@ and the notion here is that once the within-study variability is
 accounted for, the resulting model estimates better show the true
 variation across studies. There is a large degree of regularization;
 sample mean estimates are about 3 times as variable as the hierarchical
-estimates from the unconstrained model. According to this model, about
-1/3 of the variation in sample estimates may reflect variation across
-sites; the other two-thirds may reflect variation within sites. This
-degree of regularization is meaningful and substantial.
+estimates from the unconstrained model. This degree of regularization is
+meaningful and substantial.
 
 Plots based on sample effects always overstate the variability across
 the sites. To avoid this overstatement, regularization, whether from
@@ -567,10 +563,10 @@ effects is useful in visualizing data, but it provides no direct and
 calibrated measure of the evidence for the four models. To provide
 principled measures of evidence, we use Bayes factors. Rather than
 providing a formal discourse, which may be found in Jeffreys (1961),
-Kass and Raftery (1995), and Morey, Romeijn, and Rouder (2016), we
-provide an informal discussion that we have previously presented in
-Rouder, Morey, and Wagenmakers (2016) and Rouder (2017). Informally,
-evidence for models reflects how well they predict data.
+Kass \& Raftery (1995), and Morey, Romeijn, \& Rouder (2016), we provide
+an informal discussion that we have previously presented in Rouder,
+Morey, \& Wagenmakers (2016) and Rouder, Haaf, \& Aust (2017).
+Informally, evidence for models reflects how well they predict data.
 
 The right column of Figure~\ref{fig:pred} shows the predictions for each
 of the four models. We consider the relationship between two
@@ -617,15 +613,15 @@ is often impossible in closed form and may be slow or inaccurate with
 numeric methods. To that end, there has been a voluminous literature on
 how to compute these integrals in mixed settings such as the one here.
 We follow a fairly general set of specification and computations known
-to work well. These have been pioneered by Zellner and Siow (1980) and
+to work well. These have been pioneered by Zellner \& Siow (1980) and
 expanded for ANOVA by Rouder et al. (2012). This development covers
 comparisons among the null, common effect, and unconstrained models. It
 does not, however, cover comparisons to the positive effects model. To
 make these comparisons, we use a different computational approach from
 Hoijtink and colleagues (Klugkist \& Hoijtink, 2007; Klugkist et al.,
 2005). The specific computational implementation used here comes from
-Haaf and Rouder (2017), who developed Bayes factor computations for many
-simultaneousl order constraints.
+Haaf \& Rouder (2017), who developed Bayes factor computations for many
+simultaneous order constraints.
 
 There are many ways to compare the four models besides Bayes factors. We
 provide coverage of why we prefer Bayes factors to other ways in the
@@ -654,7 +650,7 @@ We reject the starting point above including the view that minimization
 of prior effects is necessary or even laudable. Rouder et al. (2016)
 argue that the goal of analysis is to add value by searching for
 theoretically-meaningful structure in data. Vanpaemel (2010) and
-Vanpaemel and Lee (2012) provide a particularly appealing view of the
+Vanpaemel \& Lee (2012) provide a particularly appealing view of the
 prior in this light. Accordingly, the prior is where theoretically
 important constraint is encoded in the model. In our case, the prior
 provides the critical constraint on the relations among studies. The
@@ -681,7 +677,7 @@ between the models. In our case, the specifications are on
 Although these parameters are not the primary target of inference, the
 prior settings on them affect the resulting Bayes factors. A full
 discussion of the prior structures on these parameters is provided in
-Haaf and Rouder (2017), and here we review the main issues. The critical
+Haaf \& Rouder (2017), and here we review the main issues. The critical
 settings are the \emph{scale} on \(\mu_\theta\) and \(\sigma^2_\theta\).
 The scale on \(\mu_\theta\) calibrates the expected size of the effect.
 This scale is not a point setting; \(\mu_\theta\) may be free to take on
@@ -725,10 +721,11 @@ Cognition}\label{wagenmakers-et-al.s-embodied-cognition}
 \includegraphics{p_files/figure-latex/wagEst-1.pdf}
 \caption{\label{fig:wagEst}Reanalysis of Wagenmakers et al. (2016)
 registered replication report. \textbf{A}. Sample means with 95\%
-confidence intervals for the 17 sites. \textbf{B}. Hierarchical model
-estimates (unconstrained model) with 95\% credible intervals. These
-estimates show that after sample noise is accounted, there is not much
-heterogeneity.}
+confidence intervals for the 17 sites. \textbf{B}. The filled points are
+hierarchical model estimates (unconstrained model) with 95\% credible
+intervals. The X's are the sample means from Panel A, and these are
+shown for comparison purposes. These estimates show that after sample
+noise is accounted, there is not much heterogeneity.}
 \end{figure}
 
 \begin{table}[tbp]
@@ -739,15 +736,15 @@ heterogeneity.}
 \toprule
 Mean & \multicolumn{1}{c}{SD} & \multicolumn{1}{c}{Null-to-Common} & \multicolumn{1}{c}{Null-to-Unconstrained} & \multicolumn{1}{c}{Null-to-Positive}\\
 \midrule
-0.40 & 0.24 & 9.7-to-1 & 245.4-to-1 & 112582.1-to-1\\
-0.40 & 0.40 & 11.4-to-1 & 1978.8-to-1 & 846249.6-to-1\\
-0.40 & 0.12 & 11.3-to-1 & 54.3-to-1 & 1523.1-to-1\\
-0.80 & 0.48 & 22.3-to-1 & 10197.8-to-1 & 9121966.1-to-1\\
-0.80 & 0.80 & 11.6-to-1 & 371926.8-to-1 & Inf-to-1\\
-0.80 & 0.24 & 22.2-to-1 & 505.5-to-1 & 135461.1-to-1\\
-0.20 & 0.12 & 5.8-to-1 & 28.4-to-1 & 514.8-to-1\\
-0.20 & 0.20 & 5.9-to-1 & 63.7-to-1 & 6317.6-to-1\\
-0.20 & 0.06 & 5.6-to-1 & 13-to-1 & 96.1-to-1\\
+0.40 & 0.24 & 11.3-to-1 & 267.4-to-1 & 41542.8-to-1\\
+0.40 & 0.40 & 11.3-to-1 & 1940.7-to-1 & 1300273-to-1\\
+0.40 & 0.12 & 11.5-to-1 & 53.6-to-1 & 1551.6-to-1\\
+0.80 & 0.48 & 22.5-to-1 & 10424.3-to-1 & 19264126.2-to-1\\
+0.80 & 0.80 & 22-to-1 & 375163.9-to-1 & Inf-to-1\\
+0.80 & 0.24 & 22-to-1 & 519.2-to-1 & 111980.5-to-1\\
+0.20 & 0.12 & 5.9-to-1 & 28-to-1 & 688.2-to-1\\
+0.20 & 0.20 & 5.7-to-1 & 81.9-to-1 & 6175.1-to-1\\
+0.20 & 0.06 & 5.8-to-1 & 12.9-to-1 & 77.6-to-1\\
 \bottomrule
 \addlinespace
 \end{tabular}
@@ -794,10 +791,13 @@ Sexism}\label{ebersole-et-al.s-moral-credentialism-and-sexism}
 \centering
 \includegraphics{p_files/figure-latex/ml3Est-1.pdf}
 \caption{\label{fig:ml3Est}Reanalysis of Ebersole et al.'s (2016)
-replication of the moral-credentialism effect. \textbf{A}. Sample means
-with 95\% confidence intervals for the 20 sites. \textbf{B}.
-Hierarchical model estimates with 95\% credible intervals. There is
-little evidence for heterogeneity across labs.}
+replication of the moral-credentialism effect. \textbf{A}. Overall
+suitability effects by site. The top panel shows the sample effects, the
+bottom panel shows the hierarchical model estimates (unconstrained
+model). The filled points are posterior means; the error bars are 95\%
+credible intervals; the Xs are the sample effects. \textbf{B}.
+Sutiability effects by the gender of the respondent. \textbf{C, D} Moral
+Credentialism effect for men and women respondents.}
 \end{figure}
 
 To show how the meta-analytic Bayes factor model-comparison system works
@@ -806,8 +806,8 @@ Ebersole et al. (2016). This paper was the result of the \emph{Many Labs
 3 Project}, which was designed to assess the replicability of ten
 effects across several sites and across different periods of the
 semester. We focus here on one particular effect, \emph{the moral
-credential effect,} which was originally demonstrated by Monin and
-Miller (2001).
+credential effect,} which was originally demonstrated by Monin \& Miller
+(2001).
 
 The Monin and Miller study was designed to assess whether participants
 were more likely to express prejudiced attitudes when their prior
@@ -892,21 +892,21 @@ and \(\bftheta_w\).
 Model & \multicolumn{1}{c}{Bayes Factor}\\
 \midrule
 Common Site + Common Gender + Common Credential & 1-to-1\\
-Common Site + Common Gender + Common Men Credential & 1-to-51.2\\
-Common Site + Common Gender + Common 2 Credentials & 1-to-6.4\\
-Common Site + Common Gender & 1-to-105.1\\
-Common Site + Commen Credential & 1-to-27881.4\\
-Positive Site + Common Gender + Common Credential & 1-to-0.6\\
-Unconstrained Site + Common Gender + Common Credential & 1-to-3.1\\
-Common Site + Positive Gender + Common Credential & 1-to-4.7\\
-Common Site + Common Gender + Positive Credential & 1-to-12.3\\
+Common Site + Common Gender + Common Men Credential & 1-to-53.2\\
+Common Site + Common Gender + Common 2 Credentials & 1-to-6.5\\
+Common Site + Common Gender & 1-to-105.7\\
+Common Site + Commen Credential & 1-to-28041.8\\
+Positive Site + Common Gender + Common Credential & 1-to-0.8\\
+Unconstrained Site + Common Gender + Common Credential & 1-to-4.5\\
+Common Site + Positive Gender + Common Credential & 1-to-4.8\\
+Common Site + Common Gender + Positive Credential & 1-to-12.6\\
 Common Site + Common Gender + Unconstrained Credential & 1-to-Inf\\
-Comon Site + Unconstrained Credential + Common Credential & 1-to-3.5\\
+Comon Site + Unconstrained Credential + Common Credential & 1-to-3.4\\
 \bottomrule
 \addlinespace
 \end{tabular}
 \begin{tablenotes}[para]
-\textit{Note.} Infinite values exceed our machine precision of \$10\textasciicircum{}304\$
+\textit{Note.} Infinite values exceed our machine precision of $10^304$
 \end{tablenotes}
 \end{threeparttable}
 \end{center}
@@ -961,31 +961,31 @@ homogeneity of the effects across the sites is plausible. In the next
 two analyses, we highlight cases where this homogeneity is not favored.
 Models with heterogeneity best describe the data.
 
-Haaf and Rouder (2017) developed the models we use here for
+Haaf \& Rouder (2017) developed the models we use here for
 repeated-measure tasks. In these tasks, several participants each
 performed several trials in one of two conditions. Haaf and Rouder
 analyzed three different Stroop experiments, each independently. We
 analyze the same data here meta-analytically. For each participant in
 each experiment, we calculate two scores: a mean response time across
 all trials in the congruent condition, and a mean response time across
-all trials in the incongruent condition. Note that this meta-analysis is
-that of a within-subject manipulation. All participants provide a score
-in each condition.
+all trials in the incongruent condition. We analyze the data with the
+four basic meta-analytic models: the strong null model that there is no
+Stroop effect in any study; the common effect model that there is a
+single, common true Stroop effect for all studies; the positive effects
+model that true Stroop effects for all studies are in the usual
+direction; and the unconstrained model where true Stroop effects across
+studies may have different directions.
 
-We analyze the data with the four basic meta-analytic models: the strong
-null model that there is no Stroop effect in any study; the common
-effect model that there is a single, common true Stroop effect for all
-studies; the positive effects model that true Stroop effects for all
-studies are in the usual direction; and the unconstrained model where
-true Stroop effects across studies may have different directions. These
-four models may be adapted in a straightforward manner for
-within-subject designs.\footnote{A formal statement of the unconstrained
-  model is as follows. Let \(N\) denote the total number of participants
-  across all the studies, and let \(j=1,\ldots,N\) index these
-  participants. Let \(i_j\) be the study that the \(j\)th participant is
-  in. Let \(Y_{jk}\) denote the response time for the \(j\)th
-  participant in the \(k\)th Stroop condition (\(k=1,2\)). The model is
-  given by
+One difference in the Haaf and Rouder set is that the critical variable
+is manipulated in a within-subjects fashion. All participants provide a
+score in each condition. The four models may be adapted in a
+straightforward manner for within-subject designs.\footnote{A formal
+  statement of the unconstrained model is as follows. Let \(N\) denote
+  the total number of participants across all the studies, and let
+  \(j=1,\ldots,N\) index these participants. Let \(i_j\) be the study
+  that the \(j\)th participant is in. Let \(Y_{jk}\) denote the response
+  time for the \(j\)th participant in the \(k\)th Stroop condition
+  (\(k=1,2\)). The model is given by
   \(Y_{jk}\sim \mbox{Normal}([\alpha^*_j+\alpha_{i_j}+x_k[\theta^*_j+\theta_{i_j}],\sigma^2)\).
   Here \(x_k=0,1\) is an indicator that encodes the Stroop condition.
   Parameters \(\alpha_i\) and \(\theta_i\) are study-specific intercept
@@ -1019,15 +1019,19 @@ regularize.
 \begin{figure}[htbp]
 \centering
 \includegraphics{p_files/figure-latex/hrEst-1.pdf}
-\caption{\label{fig:hrEst}Meta-analytic hierarchical-model estimates for
-Haaf and Rouder's (2017) collection of Stroop experiments. The effect
-varies from study to study, but the sign is consistently positive.}
+\caption{\label{fig:hrEst}Meta-analytic hierarchical-model (unconstrained)
+estimates for Haaf and Rouder's (2017) collection of Stroop experiments.
+The X's denote sample effects which, in this case, are quite similar to
+posterior means from the model. The effects varies from study to study,
+but the sign is consistently positive.}
 \end{figure}
 
 Bayes factor analysis reveals that the positive model is most preferred.
 It is preferred by a factor of 3.6-to-1 over the unconstrained model, by
 a factor of \(10^{11}\)-to-1 over the common-effect model, and by a
-factor of \(10^{46}\)-to-1 over the null model.
+factor of \(10^{46}\)-to-1 over the null model. Hence, we may conclude
+that all studies show a Stroop effect and that there is relatively
+modest evidence for variability across these studies.
 
 \section{Corker et al's Stability of the Big Five Personality
 Traits}\label{corker-et-als-stability-of-the-big-five-personality-traits}
@@ -1035,10 +1039,11 @@ Traits}\label{corker-et-als-stability-of-the-big-five-personality-traits}
 \begin{figure}[htbp]
 \centering
 \includegraphics{p_files/figure-latex/corkerEst-1.pdf}
-\caption{\label{fig:corkerEst}Meta-analytic hierarchical-model (regularized)
-estimates for Big Five personality characteristics across the 30 sites
-in Corker et al. (2017). It is apparent that there is substantial
-variation across the labs.}
+\caption{\label{fig:corkerEst}Meta-analytic hierarchical-model
+(unconstrained) estimates for Big Five personality characteristics
+across the 30 sites in Corker et al. (2017). The Xs denote sample
+effects. It is apparent that there is substantial variation across the
+labs in all five characteristics.}
 \end{figure}
 
 In the preceding three analyses, the models favored were the null, the
@@ -1111,10 +1116,9 @@ variability for each of the personality characteristics.
 There are several approaches to specifying families of models for
 comparison. We highlight what we consider to be an appropriate
 minimalist approach based on the comparison among three models. The
-simplest of these models has slopes and intercepts do not vary across
-labs, the second model has intercepts that vary but slopes do that not,
-and the third model has intercepts and all five slope parameters that
-vary across labs.
+simplest of these models has slopes and intercepts fixed across labs,
+the second model has intercepts that may vary but slopes that are fixed,
+and the third model has intercepts and slopes that may vary across labs.
 
 The results are as follows: The common intercept and slope model is
 least compatible with the data. It is dominated by the unconstrained
@@ -1124,8 +1128,8 @@ intercept and unconstrained slope model (Bayes factor of about
 \(10^{48}\)-to-1). These staggering values remain staggering across
 reasonable variation in prior settings.
 
-The alternative approach, perhaps a maximalist approach, is to specify
-all possible submodels of the unconstrained intercept and slopes model.
+The alternative approach, perhaps a maximal approach, is to specify all
+possible submodels of the unconstrained intercept and slopes model.
 Accordingly, we include models where some traits vary across sites while
 others do not. An example of such a model is where \emph{agreeableness}
 and \emph{openess} vary across sites, but \emph{conscienciousness},
@@ -1143,7 +1147,7 @@ above three models.
 \caption{\label{fig:corkEst2}Estimates of variability of personality
 characteristis. Posterior distribution of standard deviations were
 computed and plotted are the means and 95\% credible intervals of these
-distributions.}
+standard-deviation distributions.}
 \end{figure}
 
 Even when testing is inappropriate, we may still report estimates of the
@@ -1162,7 +1166,7 @@ theoretical positions: 1. A strong null effect where no study has any
 effect whatsoever; 2. A homogeneous, common effect across studies; 3.
 Heterogeneity in study effects subject to the constraint that all
 studies have a positive true effect; and 4. The negation of this
-constraint where some studies have true positive effecst and others have
+constraint where some studies have true positive effects and others have
 true negative effects. These four, of course, are not the only choices,
 and here we discuss alternatives.
 
@@ -1175,7 +1179,7 @@ and here we discuss alternatives.
 the common-effect equivalence model (top row) and the regular
 equivalence model (bottom row). The left column shows model
 specifications, the right column shows the predictions for data from the
-models.}
+models. The format is the same as Figure \ref{fig:pred}.}
 \end{figure}
 
 One trend in the literature is equivalence testing (Rogers et al.,
@@ -1201,15 +1205,16 @@ region, vary from each other: \[
 \]
 
 Bayesian analysis of models with equivalence regions follows the usual
-form (Morey \& Rouder, 2011). Figure~@(fig:fig-equivalence), analgous to
-Figure~\ref{fig:pred}, shows the model specifications for two studies as
-well as the predictions. As can be seen, these models tend to look a lot
-like the null if the equivalence region is small and much like the
-unconstrained model if it is large. We computed the Bayes factor for the
-common effect version for the embodied-cognition task with an
-equivalence region that is 1/5 of a point on the Likert scale. The Bayes
-factor for the equivalence-region model was 0.30-to-1 when compared to
-the null model, which indicates modest preference for the null.
+form (Morey \& Rouder, 2011). Figure~\ref{fig:fig-equivalence},
+analogous to Figure~\ref{fig:pred}, shows the model specifications for
+two studies as well as the predictions. As can be seen, these models
+tend to look a lot like the null if the equivalence region is small and
+much like the unconstrained model if it is large. We computed the Bayes
+factor for the common effect version for the embodied-cognition task
+with an equivalence region that is 1/5 of a point on the Likert scale.
+The Bayes factor for the equivalence-region model was 0.29-to-1 when
+compared to the null model, which indicates modest preference for the
+null.
 
 The appeal of equivalence regions in classical settings---that one can
 accept the equivalence regions---is moot in Bayesian analysis. In
@@ -1227,509 +1232,6 @@ they may be of interests in specific applied contexts.
 
 \subsection{Robustness to Alternative
 Specifications}\label{robustness-to-alternative-specifications}
-
-\begin{verbatim}
-## [1] 1 1
-## [1] 1 2
-## [1] 1 3
-## [1] 1 4
-## [1] 1 5
-## [1] 1 6
-## [1] 1 7
-## [1] 1 8
-## [1] 1 9
-## [1]  1 10
-## [1]  1 11
-## [1]  1 12
-## [1]  1 13
-## [1]  1 14
-## [1]  1 15
-## [1]  1 16
-## [1]  1 17
-## [1]  1 18
-## [1]  1 19
-## [1]  1 20
-## [1]  1 21
-## [1]  1 22
-## [1]  1 23
-## [1]  1 24
-## [1]  1 25
-## [1]  1 26
-## [1]  1 27
-## [1]  1 28
-## [1]  1 29
-## [1]  1 30
-## [1]  1 31
-## [1]  1 32
-## [1]  1 33
-## [1]  1 34
-## [1]  1 35
-## [1]  1 36
-## [1]  1 37
-## [1]  1 38
-## [1]  1 39
-## [1]  1 40
-## [1]  1 41
-## [1]  1 42
-## [1]  1 43
-## [1]  1 44
-## [1]  1 45
-## [1]  1 46
-## [1]  1 47
-## [1]  1 48
-## [1]  1 49
-## [1]  1 50
-## [1]  1 51
-## [1]  1 52
-## [1]  1 53
-## [1]  1 54
-## [1]  1 55
-## [1]  1 56
-## [1]  1 57
-## [1]  1 58
-## [1]  1 59
-## [1]  1 60
-## [1]  1 61
-## [1]  1 62
-## [1]  1 63
-## [1]  1 64
-## [1]  1 65
-## [1]  1 66
-## [1]  1 67
-## [1]  1 68
-## [1]  1 69
-## [1]  1 70
-## [1]  1 71
-## [1]  1 72
-## [1]  1 73
-## [1]  1 74
-## [1]  1 75
-## [1]  1 76
-## [1]  1 77
-## [1]  1 78
-## [1]  1 79
-## [1]  1 80
-## [1]  1 81
-## [1]  1 82
-## [1]  1 83
-## [1]  1 84
-## [1]  1 85
-## [1]  1 86
-## [1]  1 87
-## [1]  1 88
-## [1]  1 89
-## [1]  1 90
-## [1]  1 91
-## [1]  1 92
-## [1]  1 93
-## [1]  1 94
-## [1]  1 95
-## [1]  1 96
-## [1]  1 97
-## [1]  1 98
-## [1]  1 99
-## [1]   1 100
-## [1] 2 1
-## [1] 2 2
-## [1] 2 3
-## [1] 2 4
-## [1] 2 5
-## [1] 2 6
-## [1] 2 7
-## [1] 2 8
-## [1] 2 9
-## [1]  2 10
-## [1]  2 11
-## [1]  2 12
-## [1]  2 13
-## [1]  2 14
-## [1]  2 15
-## [1]  2 16
-## [1]  2 17
-## [1]  2 18
-## [1]  2 19
-## [1]  2 20
-## [1]  2 21
-## [1]  2 22
-## [1]  2 23
-## [1]  2 24
-## [1]  2 25
-## [1]  2 26
-## [1]  2 27
-## [1]  2 28
-## [1]  2 29
-## [1]  2 30
-## [1]  2 31
-## [1]  2 32
-## [1]  2 33
-## [1]  2 34
-## [1]  2 35
-## [1]  2 36
-## [1]  2 37
-## [1]  2 38
-## [1]  2 39
-## [1]  2 40
-## [1]  2 41
-## [1]  2 42
-## [1]  2 43
-## [1]  2 44
-## [1]  2 45
-## [1]  2 46
-## [1]  2 47
-## [1]  2 48
-## [1]  2 49
-## [1]  2 50
-## [1]  2 51
-## [1]  2 52
-## [1]  2 53
-## [1]  2 54
-## [1]  2 55
-## [1]  2 56
-## [1]  2 57
-## [1]  2 58
-## [1]  2 59
-## [1]  2 60
-## [1]  2 61
-## [1]  2 62
-## [1]  2 63
-## [1]  2 64
-## [1]  2 65
-## [1]  2 66
-## [1]  2 67
-## [1]  2 68
-## [1]  2 69
-## [1]  2 70
-## [1]  2 71
-## [1]  2 72
-## [1]  2 73
-## [1]  2 74
-## [1]  2 75
-## [1]  2 76
-## [1]  2 77
-## [1]  2 78
-## [1]  2 79
-## [1]  2 80
-## [1]  2 81
-## [1]  2 82
-## [1]  2 83
-## [1]  2 84
-## [1]  2 85
-## [1]  2 86
-## [1]  2 87
-## [1]  2 88
-## [1]  2 89
-## [1]  2 90
-## [1]  2 91
-## [1]  2 92
-## [1]  2 93
-## [1]  2 94
-## [1]  2 95
-## [1]  2 96
-## [1]  2 97
-## [1]  2 98
-## [1]  2 99
-## [1]   2 100
-## [1] 3 1
-## [1] 3 2
-## [1] 3 3
-## [1] 3 4
-## [1] 3 5
-## [1] 3 6
-## [1] 3 7
-## [1] 3 8
-## [1] 3 9
-## [1]  3 10
-## [1]  3 11
-## [1]  3 12
-## [1]  3 13
-## [1]  3 14
-## [1]  3 15
-## [1]  3 16
-## [1]  3 17
-## [1]  3 18
-## [1]  3 19
-## [1]  3 20
-## [1]  3 21
-## [1]  3 22
-## [1]  3 23
-## [1]  3 24
-## [1]  3 25
-## [1]  3 26
-## [1]  3 27
-## [1]  3 28
-## [1]  3 29
-## [1]  3 30
-## [1]  3 31
-## [1]  3 32
-## [1]  3 33
-## [1]  3 34
-## [1]  3 35
-## [1]  3 36
-## [1]  3 37
-## [1]  3 38
-## [1]  3 39
-## [1]  3 40
-## [1]  3 41
-## [1]  3 42
-## [1]  3 43
-## [1]  3 44
-## [1]  3 45
-## [1]  3 46
-## [1]  3 47
-## [1]  3 48
-## [1]  3 49
-## [1]  3 50
-## [1]  3 51
-## [1]  3 52
-## [1]  3 53
-## [1]  3 54
-## [1]  3 55
-## [1]  3 56
-## [1]  3 57
-## [1]  3 58
-## [1]  3 59
-## [1]  3 60
-## [1]  3 61
-## [1]  3 62
-## [1]  3 63
-## [1]  3 64
-## [1]  3 65
-## [1]  3 66
-## [1]  3 67
-## [1]  3 68
-## [1]  3 69
-## [1]  3 70
-## [1]  3 71
-## [1]  3 72
-## [1]  3 73
-## [1]  3 74
-## [1]  3 75
-## [1]  3 76
-## [1]  3 77
-## [1]  3 78
-## [1]  3 79
-## [1]  3 80
-## [1]  3 81
-## [1]  3 82
-## [1]  3 83
-## [1]  3 84
-## [1]  3 85
-## [1]  3 86
-## [1]  3 87
-## [1]  3 88
-## [1]  3 89
-## [1]  3 90
-## [1]  3 91
-## [1]  3 92
-## [1]  3 93
-## [1]  3 94
-## [1]  3 95
-## [1]  3 96
-## [1]  3 97
-## [1]  3 98
-## [1]  3 99
-## [1]   3 100
-## [1] 4 1
-## [1] 4 2
-## [1] 4 3
-## [1] 4 4
-## [1] 4 5
-## [1] 4 6
-## [1] 4 7
-## [1] 4 8
-## [1] 4 9
-## [1]  4 10
-## [1]  4 11
-## [1]  4 12
-## [1]  4 13
-## [1]  4 14
-## [1]  4 15
-## [1]  4 16
-## [1]  4 17
-## [1]  4 18
-## [1]  4 19
-## [1]  4 20
-## [1]  4 21
-## [1]  4 22
-## [1]  4 23
-## [1]  4 24
-## [1]  4 25
-## [1]  4 26
-## [1]  4 27
-## [1]  4 28
-## [1]  4 29
-## [1]  4 30
-## [1]  4 31
-## [1]  4 32
-## [1]  4 33
-## [1]  4 34
-## [1]  4 35
-## [1]  4 36
-## [1]  4 37
-## [1]  4 38
-## [1]  4 39
-## [1]  4 40
-## [1]  4 41
-## [1]  4 42
-## [1]  4 43
-## [1]  4 44
-## [1]  4 45
-## [1]  4 46
-## [1]  4 47
-## [1]  4 48
-## [1]  4 49
-## [1]  4 50
-## [1]  4 51
-## [1]  4 52
-## [1]  4 53
-## [1]  4 54
-## [1]  4 55
-## [1]  4 56
-## [1]  4 57
-## [1]  4 58
-## [1]  4 59
-## [1]  4 60
-## [1]  4 61
-## [1]  4 62
-## [1]  4 63
-## [1]  4 64
-## [1]  4 65
-## [1]  4 66
-## [1]  4 67
-## [1]  4 68
-## [1]  4 69
-## [1]  4 70
-## [1]  4 71
-## [1]  4 72
-## [1]  4 73
-## [1]  4 74
-## [1]  4 75
-## [1]  4 76
-## [1]  4 77
-## [1]  4 78
-## [1]  4 79
-## [1]  4 80
-## [1]  4 81
-## [1]  4 82
-## [1]  4 83
-## [1]  4 84
-## [1]  4 85
-## [1]  4 86
-## [1]  4 87
-## [1]  4 88
-## [1]  4 89
-## [1]  4 90
-## [1]  4 91
-## [1]  4 92
-## [1]  4 93
-## [1]  4 94
-## [1]  4 95
-## [1]  4 96
-## [1]  4 97
-## [1]  4 98
-## [1]  4 99
-## [1]   4 100
-## [1] 5 1
-## [1] 5 2
-## [1] 5 3
-## [1] 5 4
-## [1] 5 5
-## [1] 5 6
-## [1] 5 7
-## [1] 5 8
-## [1] 5 9
-## [1]  5 10
-## [1]  5 11
-## [1]  5 12
-## [1]  5 13
-## [1]  5 14
-## [1]  5 15
-## [1]  5 16
-## [1]  5 17
-## [1]  5 18
-## [1]  5 19
-## [1]  5 20
-## [1]  5 21
-## [1]  5 22
-## [1]  5 23
-## [1]  5 24
-## [1]  5 25
-## [1]  5 26
-## [1]  5 27
-## [1]  5 28
-## [1]  5 29
-## [1]  5 30
-## [1]  5 31
-## [1]  5 32
-## [1]  5 33
-## [1]  5 34
-## [1]  5 35
-## [1]  5 36
-## [1]  5 37
-## [1]  5 38
-## [1]  5 39
-## [1]  5 40
-## [1]  5 41
-## [1]  5 42
-## [1]  5 43
-## [1]  5 44
-## [1]  5 45
-## [1]  5 46
-## [1]  5 47
-## [1]  5 48
-## [1]  5 49
-## [1]  5 50
-## [1]  5 51
-## [1]  5 52
-## [1]  5 53
-## [1]  5 54
-## [1]  5 55
-## [1]  5 56
-## [1]  5 57
-## [1]  5 58
-## [1]  5 59
-## [1]  5 60
-## [1]  5 61
-## [1]  5 62
-## [1]  5 63
-## [1]  5 64
-## [1]  5 65
-## [1]  5 66
-## [1]  5 67
-## [1]  5 68
-## [1]  5 69
-## [1]  5 70
-## [1]  5 71
-## [1]  5 72
-## [1]  5 73
-## [1]  5 74
-## [1]  5 75
-## [1]  5 76
-## [1]  5 77
-## [1]  5 78
-## [1]  5 79
-## [1]  5 80
-## [1]  5 81
-## [1]  5 82
-## [1]  5 83
-## [1]  5 84
-## [1]  5 85
-## [1]  5 86
-## [1]  5 87
-## [1]  5 88
-## [1]  5 89
-## [1]  5 90
-## [1]  5 91
-## [1]  5 92
-## [1]  5 93
-## [1]  5 94
-## [1]  5 95
-## [1]  5 96
-## [1]  5 97
-## [1]  5 98
-## [1]  5 99
-## [1]   5 100
-\end{verbatim}
 
 \begin{figure}[htbp]
 \centering
@@ -1750,8 +1252,8 @@ computational convenience. The Bayes factor model comparison statistic
 is the marginal probability of the observed data under a model, and
 computing this marginal is done through integrating out the parameters.
 Accurate evaluation of this integration can be problematic. The current
-distributional assumptions follow from Zellner and Siow (1980) who
-showed their computational convenience.
+distributional assumptions follow from Zellner \& Siow (1980) who showed
+their computational convenience.
 
 It may seem reasonable to wonder what may happen if the data drastically
 violate these distributional assumptions. One area of concern is the
@@ -1763,43 +1265,43 @@ affairs. One is a latent mixture model. One can imagine that there are
 two (or more) classes of studies, and there is some probability that
 each study belongs to a class.
 
-Figure~@(fig:fig-alt-spec)A shows two unconstrained models: the normal
-and a mixture model. Our aim in choosing particulars for these truths
-was to equate the overall mean and variance. The true effects for each
-study were the ticks at the top of the panel. We simulated data from
-these true values 100 times for each of the two models. The Bayes factor
-between the normal unconstrained model and the positive model is
+Figure~\ref{fig:fig-alt-spec}A shows two unconstrained models: the
+normal and a mixture model. Our aim in choosing particulars for these
+truths was to equate the overall mean and variance. The true effects for
+each study were the ticks at the top of the panel. We simulated data
+from these true values 100 times for each of the two models. The Bayes
+factor between the normal unconstrained model and the positive model is
 computed for each of the simulated data sets. At first glance, one might
 think the Bayes factor favors the normal unconstrained model over the
 positive model when the truth is from the normal as there is a match
 between method and assumption. The Bayes factor distributions from the
 simulation are shown in the first two violin plots of
-Figure~@(fig:fig-alt-spec)C. Surprisingly, the above intuition is wrong.
-The Bayes factor between the normal unconstrained model and the positive
-model favored the unconstrained model when the latent mixture served as
-truth even more so than when the normal model served as truth. This
-behavior, though counter intuitive, is worth consideration. The mixture
-model has a larger fraction of negative true values than the normal
-model (see the ticks in Figure~@(fig:fig-alt-spec)A); hence the
-resulting data tend to be better predicted by the unconstrained model
-relative to the positive model.
+Figure~\ref{fig:fig-alt-spec}C. Surprisingly, the above intuition is
+wrong. The Bayes factor between the normal unconstrained model and the
+positive model favored the unconstrained model when the latent mixture
+served as truth even more so than when the normal model served as truth.
+This behavior, though counter intuitive, is worth consideration. The
+mixture model has a larger fraction of negative true values than the
+normal model (see the ticks in Figure~\ref{fig:fig-alt-spec}A); hence
+the resulting data tend to be better predicted by the unconstrained
+model relative to the positive model.
 
 The critical point to emerge from this simulation study is that the
 unconstrained normal model is a useful instantiation of the
 unconstrained position. Here is why: The goal is to detect a few
 negative true effects against a background of many true positive ones.
 The normal for this configuration would have a positive mean and
-sufficient variance so that there is noticable negative mass (as in
-Figure~@(fig:fig-alt-spec)A). The distribution of the negative part is
-not only small in mass, but is skewed such that small negative effects
-are weighted. The normal therefore is well-suited to detect the most
-difficult case---the one where negative effects are few and more likely
-to be clustered near zero. The mixture models are much easier cases as
-negative true effects are more numerous and more negative. And this is
-why the Bayes factor favors the unconstrained model with mixture truths
-moreso than with normal truths.
+sufficient variance so that there is noticeable negative mass (as in
+Figure~\ref{fig:fig-alt-spec}A). The distribution of the negative part
+is not only small in mass, but is skewed such that small negative
+effects are weighted. The normal therefore is well-suited to detect the
+most difficult case---the one where negative effects are few and more
+likely to be clustered near zero. The mixture models are much easier
+cases as negative true effects are more numerous and more negative. And
+this is why the Bayes factor favors the unconstrained model with mixture
+truths more so than with normal truths.
 
-Figure~@(fig:fig-alt-spec)B shows a set of simulations where all true
+Figure~\ref{fig:fig-alt-spec}B shows a set of simulations where all true
 study effects are positive. One model is the half normal. A second is a
 positive truncated normal with positive mean. The third represents a
 misspecification. Here the true values follow an exponential rather than
@@ -1817,7 +1319,7 @@ be more compatible with the unconstrained normal model than with the
 positive truncated model. Therefore, the setup is tuned to detect small
 violations of positivity even at the risk of a false alarm. In reality,
 this is a useful tuning as we have yet to find any violations of
-positiveity in any meta-analytic data set.
+positivity in any meta-analytic data set.
 
 \section{General Discussion}\label{general-discussion}
 
@@ -1827,7 +1329,7 @@ using means, variances, and CIs. These are properties that help the
 analyst understand the distribution of outcomes across a collection of
 experiments. Yet, we argue this distribution itself is difficult to
 interpret because it reflects in part the variation of design parameters
-across studies. Condequently, we suggest focusing on basic ordinal
+across studies. Consequently, we suggest focusing on basic ordinal
 properties that may be shared among studies. The strong null model
 stipulates that no study shows a true effect. The common-effect model
 predicts that all studies have the same true effect. The positive
@@ -1846,28 +1348,29 @@ Methods}\label{alternative-comparison-methods}
 Bayes factor is not the only game in town. The classical approach to
 meta-analysis stresses two questions: first, is the meta-analytic mean
 different than zero, and second, is there heterogeneity among study
-effects? Test statistics for the first question include JOE and JOE;
-those for the second include JOE and JOE. for each of these test
-statistics, one can perform a classical hypothesis test to reject the
-appropriate null.
+effects? Test statistics for the first question include \(\delta\), its
+\emph{z}-value and associated \emph{p}-value; those for the second
+include the Q-statistic (Cochran, 1954) and its associated
+\emph{p}-value. For each of these test statistics, one can perform a
+classical hypothesis test to reject the appropriate null.
 
 We find Bayes factor model comparison advantageous for the following
 reasons: 1. There are no classical tests of the positive model, hence by
 adopting the Bayesian framework questions of ordinal constraints may be
 considered. 2. Significance testing is asymmetric in that while it
-allows one to reject constraints (e.g., the null or heterogeniety), it
+allows one to reject constraints (e.g., the null or heterogeneity), it
 does not allow one to accept them. Bayesian model comparison has no
 asymmetry---the analyst can state relative evidence for any of the
 models. The relative utility of Bayes factor is often a topic of
-vigorous debate, and interested readers can consult Berger and Berry
-(1988), Edwards, Lindman, and Savage (1963), Gelman and Shalizi (2013),
-Kruschke and Liddell (2017), ({\textbf{???}}), Rouder and Morey (2012),
-Sellke, Bayarri, and Berger (2001), and Wagenmakers (2007) among many,
-many others. We will refrain from relitigating the debate here.
+vigorous debate, and interested readers can consult Berger \& Berry
+(1988), Edwards, Lindman, \& Savage (1963), Gelman \& Shalizi (2013),
+Kruschke \& Liddell (2017), Liu \& Aitkin (2008), Rouder \& Morey
+(2012), Sellke, Bayarri, \& Berger (2001), and Wagenmakers (2007) among
+many, many others. We will refrain from hashing the debate here.
 
 For model selection, it is common to use evaluation of goodness-of-fit
 statistics without preserving long-term error rates. Two examples are
-the Akaike information criterion (AIC; {\textbf{???}}) and the Bayesian
+the Akaike information criterion (AIC; Akaike, 1974) and the Bayesian
 information criterion (BIC; Schwartz, 1978). These fit statistics have
 built-in penalties for complexity instantiated by counting parameters.
 Such an approach, however, is inappropriate for ordinal constraints
@@ -1877,13 +1380,13 @@ model-selection statistics are inappropriate here.
 
 There are several approaches to model comparison in Bayesian analysis as
 well. Alternatives include estimation (Kruschke \& Liddell, 2017),
-deviance information criteria (DIC; {\textbf{???}}), and, most recently,
-inference based on cross validation (Vehtari, Gelman, \& Gabry, 2017).
-Our choice is a matter of principle. Bayes factor is a direct
-consequence of Bayes' rule (Efron, 2005). If one wishes to apply the law
-of conditional probability, then Bayes factor is the unique multiplier
-for updating the plausibility of models. No other method has this
-property, and as a result, they do not implement rational updating.
+deviance information criteria (DIC; Spiegelhalter et al., 2002), and,
+most recently, inference based on cross validation (Vehtari, Gelman, \&
+Gabry, 2017). Our choice is a matter of principle. Bayes factor is a
+direct consequence of Bayes' rule (Efron, 2005). If one wishes to apply
+the law of conditional probability, then Bayes factor is the unique
+multiplier for updating the plausibility of models. No other method has
+this property, and as a result, they do not implement rational updating.
 Other methods are based on different sets of desiderata, the most common
 of which is the desire to have minimal sensitivity to changes in the
 prior. We can respect others' goals in this regard, but as a matter of
@@ -1931,10 +1434,10 @@ point it may prove useful to develop more realistic models of incoherent
 phenomena. Incoherent phenomena are those where some studies yield truly
 negative effects while other studies yield truly positive effects. In
 these cases, perhaps studies should be modeled as belonging to latent
-classes as in the above similation study. Then, the analyst can assess
+classes as in the above simulation study. Then, the analyst can assess
 whether this more flexible model better accounts for the data than the
 four presented. Fourth, it may prove useful to model publication bias.
-Guan and Vandekerckhove (2016) provide a new model-based approach, and
+Guan \& Vandekerckhove (2016) provide a new model-based approach, and
 their treatment of publication bias may conceivably be incorporated into
 our meta-analytic models.
 
@@ -1950,6 +1453,10 @@ We hope this new approach to meta-analysis proves timely and topical.
 Aitkin, M. (1991). Posterior Bayes factors. \emph{Journal of the Royal
 Statistical Society. Series B (Methodological)}, \emph{53}(1), 111--142.
 Retrieved from \url{http://www.jstor.org/stable/2345730}
+
+\hypertarget{ref-Akaike:1974}{}
+Akaike, H. (1974). A new look at the statistical model identification.
+\emph{IEEE Transactions on Automatic Control}, \emph{19}, 716--723.
 
 \hypertarget{ref-Anderson:etal:2010}{}
 Anderson, C. A., Shibuya, A., Ihori, N., Swing, E. L., Bushman, B. J.,
@@ -1972,6 +1479,11 @@ MA: MIT Press.
 Borenstein, M., Hedges, L. V., Higgins, J., \& Rothstein, H. R. (2010).
 A basic introduction to fixed-effect and random-effects models for
 meta-analysis. \emph{Research Synthesis Methods}, \emph{1}(2), 97--111.
+
+\hypertarget{ref-Cochran:1954}{}
+Cochran, W. G. (1954). The combination of estimates from different
+experiments. \emph{Biometrics}, \emph{10}, 101--129. Retrieved from
+\url{10.2307/3001666}
 
 \hypertarget{ref-Corker:etal:2017}{}
 Corker, K. S., Donnellan, M. B., Kim, S. Y., Schwartz, S. J., \&
@@ -2029,7 +1541,11 @@ mitigation of publication bias. \emph{Psychonomic Bulletin and Review},
 
 \hypertarget{ref-Haaf:Rouder:2017}{}
 Haaf, J. M., \& Rouder, J. N. (2017). Developing constraint in Bayesian
-mixed models. \emph{Psychological Methods}.
+mixed models. \emph{Psychological Methods}, \emph{22}(4), 779--798.
+
+\hypertarget{ref-Jackman:2009}{}
+Jackman, S. (2009). \emph{Bayesian analysis for the social sciences}.
+Chichester, United Kingdom: John Wiley \& Sons.
 
 \hypertarget{ref-Jeffreys:1961}{}
 Jeffreys, H. (1961). \emph{Theory of probability (3rd edition)}. New
@@ -2047,9 +1563,9 @@ and about equality constrained models. \emph{Computational Statistics \&
 Data Analysis}, \emph{51}(12), 6367--6379.
 
 \hypertarget{ref-Klugkist:etal:2005}{}
-Klugkist, I., Kato, B., \& Hoijtink, H. (2005). Bayesian model selection
-using encompassing priors. \emph{Statistica Neerlandica}, \emph{59},
-57--69.
+Klugkist, I., Laudy, O., \& Hoijtink, H. (2005). Inequality constrained
+analysis of variance: A bayesian approach. \emph{Psychological Methods},
+\emph{10}(4), 477.
 
 \hypertarget{ref-Kruschke:2012}{}
 Kruschke, J. K. (2012). Bayesian estimation supersedes the \(t\) test.
@@ -2060,6 +1576,12 @@ Kruschke, J. K., \& Liddell, T. M. (2017). The Bayesian new statistics:
 Hypothesis testing, estimation, meta-analysis, and power analysis from a
 Bayesian perspective. \emph{Psychonomic Bulletin \& Review}. Retrieved
 from \url{http://link.springer.com/article/10.3758/s13423-016-1221-4}
+
+\hypertarget{ref-Liu:Aitkin:2008}{}
+Liu, C. C., \& Aitkin, M. (2008). Bayes factors: Prior sensitivity and
+model generalizability. \emph{Journal of Mathematical Psychology},
+\emph{56}, 362--375. Retrieved from
+\url{http://dx.doi.org/10.1016/j.jmp.2008.03.002}
 
 \hypertarget{ref-Monin:Miller:2001}{}
 Monin, B., \& Miller, D. T. (2001). Moral credentials and the expression
@@ -2087,15 +1609,15 @@ Rogers, J. L., Howard, K. I., \& Vessey, J. T. (1993). Using
 significance tests to evaluate the equivalence between two experimental
 groups. \emph{Psychological Bulletin}, \emph{113}, 553--565.
 
-\hypertarget{ref-Rouder:etal:2017}{}
-Rouder, H., J. N. (2017). \emph{From theories to models to predictions:
-A bayesian model comparison approach}.
-
 \hypertarget{ref-Rouder:Morey:2012}{}
 Rouder, J. N., \& Morey, R. D. (2012). Default Bayes factors for model
 selection in regression. \emph{Multivariate Behavioral Research},
 \emph{47}, 877--903. Retrieved from
 \url{http://dx.doi.org/10.1080/00273171.2012.734737}
+
+\hypertarget{ref-Rouder:etal:2017}{}
+Rouder, J. N., Haaf, J. M., \& Aust, F. (2017). \emph{From theories to
+models to predictions: A bayesian model comparison approach}.
 
 \hypertarget{ref-Rouder:etal:2016b}{}
 Rouder, J. N., Morey, R. D., \& Wagenmakers, E.-J. (2016). The interplay
@@ -2118,6 +1640,11 @@ Sellke, T., Bayarri, M. J., \& Berger, J. O. (2001). Calibration of
 \(p\) values for testing precise null hypotheses. \emph{American
 Statistician}, \emph{55}, 62--71. Retrieved from
 \url{http://dx.doi.org/10.1198/000313001300339950}
+
+\hypertarget{ref-Silvapulle:Sen:2011}{}
+Silvapulle, M. J., \& Sen, P. K. (2011). \emph{Constrained statistical
+inference: Order, inequality, and shape constraints} (Vol. 912). John
+Wiley \& Sons.
 
 \hypertarget{ref-Spiegelhalter:etal:2002}{}
 Spiegelhalter, D. J., Best, N. G., Carlin, B. P., \& Linde, A. van der.

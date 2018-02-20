@@ -3,9 +3,14 @@
 [htbp]
 \centering
 \includegraphics{p_files/figure-latex/pred-1.pdf}
-\caption{\label{fig:pred}The four meta-analytic models as shown for two
-hypothetical studies. The left column shows the specifications; the
-right column shows the resulting predictions on observed effects.}
+\caption{\label{fig:pred}The four meta-analytic models as shown as bivariate
+distributions across two hypothetical studies. The left column shows
+model specifications. In each panel, the x-axis is the true value of the
+effect for Study 1; the y-axis is the true value of the effect for Study
+2. The plots show the bivariate distributions of true study effects and
+darker points correspond to greater density. The right column shows the
+resulting predictions on observed effects. The format of the plots are
+the same as in the left column.}
 \end{figure*}
 \efloatseparator
  
@@ -30,10 +35,11 @@ value of 0.24.}
 \includegraphics{p_files/figure-latex/wagEst-1.pdf}
 \caption{\label{fig:wagEst}Reanalysis of Wagenmakers et al. (2016)
 registered replication report. \textbf{A}. Sample means with 95\%
-confidence intervals for the 17 sites. \textbf{B}. Hierarchical model
-estimates (unconstrained model) with 95\% credible intervals. These
-estimates show that after sample noise is accounted, there is not much
-heterogeneity.}
+confidence intervals for the 17 sites. \textbf{B}. The filled points are
+hierarchical model estimates (unconstrained model) with 95\% credible
+intervals. The X's are the sample means from Panel A, and these are
+shown for comparison purposes. These estimates show that after sample
+noise is accounted, there is not much heterogeneity.}
 \end{figure*}
 \efloatseparator
  
@@ -43,10 +49,13 @@ heterogeneity.}
 \centering
 \includegraphics{p_files/figure-latex/ml3Est-1.pdf}
 \caption{\label{fig:ml3Est}Reanalysis of Ebersole et al.'s (2016)
-replication of the moral-credentialism effect. \textbf{A}. Sample means
-with 95\% confidence intervals for the 20 sites. \textbf{B}.
-Hierarchical model estimates with 95\% credible intervals. There is
-little evidence for heterogeneity across labs.}
+replication of the moral-credentialism effect. \textbf{A}. Overall
+suitability effects by site. The top panel shows the sample effects, the
+bottom panel shows the hierarchical model estimates (unconstrained
+model). The filled points are posterior means; the error bars are 95\%
+credible intervals; the Xs are the sample effects. \textbf{B}.
+Sutiability effects by the gender of the respondent. \textbf{C, D} Moral
+Credentialism effect for men and women respondents.}
 \end{figure*}
 \efloatseparator
  
@@ -55,9 +64,11 @@ little evidence for heterogeneity across labs.}
 [htbp]
 \centering
 \includegraphics{p_files/figure-latex/hrEst-1.pdf}
-\caption{\label{fig:hrEst}Meta-analytic hierarchical-model estimates for
-Haaf and Rouder's (2017) collection of Stroop experiments. The effect
-varies from study to study, but the sign is consistently positive.}
+\caption{\label{fig:hrEst}Meta-analytic hierarchical-model (unconstrained)
+estimates for Haaf and Rouder's (2017) collection of Stroop experiments.
+The X's denote sample effects which, in this case, are quite similar to
+posterior means from the model. The effects varies from study to study,
+but the sign is consistently positive.}
 \end{figure*}
 \efloatseparator
  
@@ -66,10 +77,11 @@ varies from study to study, but the sign is consistently positive.}
 [htbp]
 \centering
 \includegraphics{p_files/figure-latex/corkerEst-1.pdf}
-\caption{\label{fig:corkerEst}Meta-analytic hierarchical-model (regularized)
-estimates for Big Five personality characteristics across the 30 sites
-in Corker et al. (2017). It is apparent that there is substantial
-variation across the labs.}
+\caption{\label{fig:corkerEst}Meta-analytic hierarchical-model
+(unconstrained) estimates for Big Five personality characteristics
+across the 30 sites in Corker et al. (2017). The Xs denote sample
+effects. It is apparent that there is substantial variation across the
+labs in all five characteristics.}
 \end{figure*}
 \efloatseparator
  
@@ -81,7 +93,7 @@ variation across the labs.}
 \caption{\label{fig:corkEst2}Estimates of variability of personality
 characteristis. Posterior distribution of standard deviations were
 computed and plotted are the means and 95\% credible intervals of these
-distributions.}
+standard-deviation distributions.}
 \end{figure*}
 \efloatseparator
  
@@ -94,7 +106,7 @@ distributions.}
 the common-effect equivalence model (top row) and the regular
 equivalence model (bottom row). The left column shows model
 specifications, the right column shows the predictions for data from the
-models.}
+models. The format is the same as Figure \ref{fig:pred}.}
 \end{figure*}
 \efloatseparator
  

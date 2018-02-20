@@ -100,7 +100,7 @@ top2 <- max(Pos)
 top3 <- max(NullP)
 ```
 
-```{r pred, cache = T, fig.cap= "The four meta-analytic models as shown for two hypothetical studies.  The left column shows the specifications; the right column shows the resulting predictions on observed effects.", fig.height=8, fig.width=4}
+```{r pred, cache = T, fig.cap= "The four meta-analytic models as shown as bivariate distributions across two hypothetical studies.  The left column shows model specifications.  In each panel, the x-axis is the true value of the effect for Study 1; the y-axis is the true value of the effect for Study 2.  The plots show the bivariate distributions of true study effects and darker points correspond to greater density.   The right column shows the resulting predictions on observed effects.  The format of the plots are the same as in the left column.", fig.height=8, fig.width=4}
 modFig <- function(mat, par, ylabel, xlabel, main, top, mod
                    , xax = TRUE, yax = TRUE, modcex = 1){
   image(par
