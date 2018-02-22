@@ -1,0 +1,10 @@
+1. Welcome to this project:
+"Beyond Overall Effects: A Bayesian Approach to Finding Constraints In Meta-Analysis"
+
+2. To see the fill pipeline behind the manuscript, clone this repository.  Do not just download a single file as files are dependent on one another.
+
+3. After you have cloned the repository, go hunt for the manuscript you wish under papers.  For example, "papers/psyMethRev" is the invited revision from Psychological Methods.
+
+4. Go to the file p.Rmd to start.  It is an R Markdown file.  You should be able to execute it.
+
+5. Our R scripts depend on libraries from others.  The first block should call all the needed libraries.  Use install.packages() to install libraries as needed.  
