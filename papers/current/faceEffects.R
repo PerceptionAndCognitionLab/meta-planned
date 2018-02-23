@@ -1,7 +1,0 @@
-source('../../../meta-planned/shared/libA.R')
-dat=makeDataFrameW("../../../meta-planned/shared/wagenmakersRawData/")
-f=freqEst(dat)
-b=bayesEst(dat)
-pdf('faceEffects.pdf')
-plotter(f,b,axisText=c("Pout","Smile"))
-dev.off()
