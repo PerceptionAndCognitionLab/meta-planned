@@ -1,0 +1,30 @@
+Dear Dr. Wu,
+
+Action Editor
+
+AE-1: You ask if I think the trend in psychology toward equivalence testing reflects a desire to exclude small but uninteresting effects or reflects a weakness with NHST treatment of point nulls.  RESPONSE.  The goal of the question is to ask for a more charitable treatment of equivalence testing.  We agree that the paper will be more judicious and more impactful with a more charitable treatment.  REVISIONS: We now motivate equivalence testing with a more charitable treatment along the lines suggested.  See p. x.  DIGRESSION:  Since you posed the question, I am happy to answer.  I don't think there is a trend toward equivalence testing in my area of psychology, cognitive and perceptual psychology.  Methodologist like it, but it has not found a home in the substantive literature I am familiar with.  I think people may hesitate to use it because they are nervous about committing to criterial trivial effect size a priori. DONE.
+
+AE-2:  AE comments that our informal explanation of why the unconstrained model did so well doesn't seem to hold water.  RESPONSE:  In retrospect, we agree.  The explanation doesn't seem to hold water for the reasons indicated.  REVISIONS: Rather than work out a long winded comparison between predictions and trying to visualize them (and add yet another figure), we note the results and what this tuning means in practice.  DONE 
+
+AE-3: AE noted the wrong model was referenced in the Fig 9 caption.  We correct this infelicity  DONE
+
+
+Reviewer 1.  
+
+R1-1.  R1 writes, "While I see some advantages of the approach now, I am still missing a convincing argument why this way of performing a meta-analysis should be performed."  RESPONSE: The reason is that this approach answers a better defined, more meaningful, and more interesting question than does traditional meta-analysis.  We carefully reread our introduction, which makes this point fully and carefully.  We looked to improve the introduction, but could find much to change    REVISIONS: Instead, throughout the paper, we now make comparisons to more traditional approaches.  Please see p. xx, yy, and zz. DONE 
+
+R1-2: "Maybe one could do the following but probably the authors have better ideas: 1) Translate the traditional way to do meta-analysis into a model. 2) Show that this model is not always chosen as the best model in the examples. 3) Show how the conclusions would differ between using the traditional model and the best model."  RESPONSE: Thinking about this recommendation turned out to be quite useful.  We missed something important in our previous write up that we now include.  Our current models have a homogeneity of variance assumption that is not present in traditional meta-analysis.  REVISIONS:  We now make note of the differences between our approaches and the traditional meta-analytic models.   We also note that relaxing the homogeneity assumption would be desirable though, at present, we don't know how to do it.  DONE
+
+R1-3: Reviewer 1 noted it is conventional to have a caption on tables.  We interpreted this to mean titles on top, which we have now added.  DONE
+
+R1-4: Fig 2, We draw the common model to be positive as well and now indicate as such in the text.  See p. x.  DONE
+
+R1-5: Getting Rmd to work.  The rmd did not work for us when we went back.  We had a variable defined in our environment that was not in the code.  We were unaware of this and thank the reviewer for pointing it out.  We are usually pretty good about performing a last unit test on our code, but it must have skipped our mind.  The code on github now works.
+
+R1-6: R1 recommends both name changes which we will not do, and an auto-installation of needed libraries.  We think this is not a wise idea as not all libraries are compatible.  Competent users are fully capable of adding needed libraries.  
+
+Reviewer 2. 
+
+R2-1: "First, I still don't understand why we cannot check the posteriors of \theta_i in the unconstrained model to determine whether they are 0, equal, positive or can be negative."  RESPONSE.  The reviewer here means some posterior interval, such as the 95%CI.   Simply put, there is no single statistic to put a CI on.  Instead, the researcher would have to put CIs on all studies, much as in our figures.  Yet, there is no way of going from a constellation of several CIs to inference about the four models.  REVISIONS:  We now make this point in the General Discussion.  Please see p. xx.   DONE
+
+R2-2: R2 asks about methods of inference, particularly those based on the posterior without explicit recourse to the prior.  RESPONSE:  We think we missed the most compelling rebuttal of this point.  It is our contention that such methods are expressly inappropriate for testing the ordinal constraints.  We now show in Figure 10 that they have broadly undesirable properties.  REVISIONS: We add a few new paragraphs and a figure to illustrate the concrete problems with this approach.  Please see p. xx and Figure yy.  DONE

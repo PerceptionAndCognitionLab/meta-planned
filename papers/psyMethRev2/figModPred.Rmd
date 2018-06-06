@@ -1,0 +1,199 @@
+
+```{r prep-modelfig, cache = TRUE}
+sd0 <- .4
+eta = .5
+
+gamma <- seq(-1.5, 1.5, .025)
+
+kern <- convKernel(sigma = 5, k = "gaussian")
+
+nrmlz <- function(mat)
+{
+  tot <- sum(mat)
+  mat/tot
+}
+
+
+#Conditional model specification
+norm0 <- function(theta1, theta2, Sigma) dnorm(theta1, 0,Sigma) * dnorm(theta2, 0, Sigma)
+norm <- function(theta1, theta2, Sigma) dmvnorm(cbind(theta1, theta2), c(0,0), Sigma)
+normT1 <- function(theta1, theta2, Sigma, l, u) dtmvnorm(cbind(theta1, theta2)
+                                                   , c(0,0)
+                                                   , Sigma
+                                                   , lower = rep(l, 2)
+                                                   , upper = rep(u, 2))
+normT <- function(theta1, theta2, Sigma, l , u){
+  dtnorm(theta1, 0, Sigma, lower = l, upper = u) * dtnorm(theta2, 0, Sigma, lower = l, upper = u)
+}
+
+Null <- outer(gamma, gamma, norm0, Sigma = .002)
+Null <- nrmlz(Null)
+One <- outer(gamma
+                   , gamma
+                   , normT1
+                   , Sigma = matrix(c(sd0^2, sd0^2.001, sd0^2.001, sd0^2)
+                                    , nrow = 2)
+                   , l = 0
+                   , u = Inf) 
+One <- nrmlz(One)
+Pos <- outer(gamma
+                   , gamma
+                   , normT
+                   , sd0
+                   , l = 0
+                   , u = Inf)
+Pos <- nrmlz(Pos)
+General <- outer(gamma
+                 , gamma
+                 , norm
+                 , Sigma = matrix(c(sd0^2, 0, 0, sd0^2)
+                                  , nrow = 2))
+General <- nrmlz(General)
+
+priorPos1 <- outer(gamma
+                   , gamma
+                   , normT1
+                   , Sigma = matrix(ncol = 2, c(sd0^2, 0, 0, .005^2))
+                   , l = 0
+                   , u = Inf)
+priorPos1 <- nrmlz(priorPos1)
+
+priorPos2 <- outer(gamma
+                   , gamma
+                   , normT1
+                   , Sigma = matrix(ncol = 2, c(.005^2, 0, 0, sd0^2))
+                   , l = 0
+                   , u = Inf)
+priorPos2 <- nrmlz(priorPos2)
+
+priorSpike <- outer(gamma
+                   , gamma
+                   , normT1
+                   , Sigma = matrix(ncol = 2, c(.005^2, 0, 0, .005^2))
+                   , l = 0
+                   , u = Inf)
+priorSpike <- nrmlz(priorSpike)
+
+#Marginal model specification
+GeneralH <- outer(gamma
+                  , gamma
+                  , norm
+                  , Sigma = matrix(c(sd0^2, eta*sd0^2, eta*sd0^2, sd0^2)
+                                     , nrow = 2))
+GeneralH <- nrmlz(GeneralH)
+
+PosH <- 4 * GeneralH
+index <- gamma < 0
+PosH[index, ] <- 0
+PosH[, index] <- 0
+PosH <- nrmlz(PosH)
+
+#Model Predictions
+NullP <- nrmlz(applyFilter(Null, kern))
+OneP <- nrmlz(applyFilter(One, kern))
+PosP <- nrmlz(applyFilter(PosH, kern))
+GeneralP <- nrmlz(applyFilter(GeneralH, kern))
+
+#####Figure
+top1 <- max(One, PosH)
+top2 <- max(Pos)
+top3 <- max(NullP)
+```
+
+```{r pred, cache = T, fig.cap= "The four meta-analytic models as shown as bivariate distributions across two hypothetical studies.  The left column shows model specifications.  In each panel, the x-axis is the true value of the effect for Study 1; the y-axis is the true value of the effect for Study 2.  The plots show the bivariate distributions of true study effects and darker points correspond to greater density.   The right column shows the resulting predictions on observed effects.  The format of the plots are the same as in the left column.", fig.height=8, fig.width=4}
+modFig <- function(mat, par, ylabel, xlabel, main, top, mod
+                   , xax = TRUE, yax = TRUE, modcex = 1){
+  image(par
+        , par
+        , mat
+        , col = grey((256:0)/256)
+        , zlim = c(0, top)
+        , axes = FALSE
+        , ylab = ylabel
+        , xlab = xlabel
+        # , frame.plot=FALSE
+        , main = ""
+        , cex.lab = 1.2)
+  box(lwd=1)
+  if(xax == TRUE){
+  axis(1, at = seq(-1.5, 1.5, 1.5), cex.axis = 1.2)}
+  if(yax == TRUE){
+  axis(2, at = seq(-1.5, 1.5, 1.5), cex.axis = 1.2)}
+  abline(h = 0, col = "gray80", lty = "dotted")
+  abline(v = 0, col = "gray80", lty = "dotted")
+  mtext(mod, side = 2, line = 4, cex = modcex)
+  mtext(main, side = 3, line = 1)
+}
+
+# pdf('figModPred.pdf',width=10,height=20)
+layout(matrix(1:8, ncol = 2), widths = c(.505, .495), heights = c(.273, rep(.45/2, 2), .277))
+
+par(mar=c(1,6,3.5,0), mgp = c(2.4,.9,0), pty = "s")
+#models
+
+modFig(Null, gamma
+       , ylabel = expression(paste(theta[2])), xlabel = ""
+       , top = top1, mod = "Null", main = "Model"
+       , xax = FALSE)
+points(0, 0, pch = 19)
+
+par(mar=c(1,6,1,0), mgp = c(2.4,.9,0))
+modFig(One, gamma
+       , ylabel = expression(paste(theta[2])), xlabel = ""
+       , mod = "Common", top = top1, main = ""
+       , xax = FALSE)
+
+modFig(Pos, gamma
+       , ylabel = expression(paste(theta[2])), xlabel = ""
+       , mod = "Positive", top = top2, main = ""
+       , xax = FALSE)
+
+par(mar=c(3.5,6,1,0), mgp = c(2.4,.9,0))
+modFig(General, gamma
+       , ylabel = expression(paste(theta[2]))
+       , xlabel = expression(paste(theta[1]))
+       , mod = "Unconstrained", top = top2, main = ""
+       , xax = TRUE)
+
+#predictions
+xp <- .2
+yp <- .225
+par(mar=c(1,4.5,3.5,1), mgp = c(2.4,.9,0))
+
+modFig(NullP, gamma
+       , ylabel = expression(paste(hat(theta)[2]))
+       , xlabel = ""
+       , top = top3, mod = "", main = "Prediction"
+       , xax = FALSE)
+points(xp, yp, pch = 20, col = "darkred")
+
+par(mar=c(1,4.5,1,1), mgp = c(2.4,.9,0))
+modFig(OneP, gamma
+       , ylabel = expression(paste(hat(theta)[2])), xlabel = ""
+       , mod = "", top = top2 + .0001, main = ""
+       , xax = FALSE)
+points(xp, yp, pch = 20, col = "darkred")
+
+modFig(PosP, gamma
+       , ylabel = expression(paste(hat(theta)[2])), xlabel = ""
+       , mod = "", top = top2, main = ""
+       , xax = FALSE)
+points(xp, yp, pch = 20, col = "darkred")
+
+par(mar=c(3.5,4.5,1,1), mgp = c(2.4,.9,0))
+modFig(GeneralP, gamma
+       , ylabel = expression(paste(hat(theta)[2]))
+       , xlabel = expression(paste(hat(theta)[1]))
+       , mod = "", top = top2, main = ""
+       , xax = TRUE)
+points(xp, yp, pch = 20, col = "darkred")
+
+
+# dev.off()
+
+##Prediction for -.1 and -.09
+xInd <- which(apply(matrix(gamma), 1, function(x) all.equal(x, xp))==T)
+yInd <- which(apply(matrix(gamma), 1, function(x) all.equal(x, yp))==T)
+BF.example <- OneP[xInd, yInd]/PosP[xInd, yInd]
+```
+
