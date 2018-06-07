@@ -488,7 +488,7 @@ $$
 
 ```{r eq, echo=F}
 eq=.2
-bfE=bayesBFequiv(datW,rScale=rScale,eq=eq)
+#bfE=bayesBFequiv(datW,rScale=rScale,eq=eq)
 ```
 
 Bayesian analysis of models with equivalence regions follows the usual form [@Morey:Rouder:2011].   Figure\ \ref{fig:fig-equivalence}, analogous to Figure\ \ref{fig:pred}, shows the model specifications for two studies as well as the predictions.  As can be seen, these models tend to look a lot like the null if the equivalence region is small and much like the unconstrained model if it is large.  We computed the Bayes factor for the common effect version for the embodied-cognition task with an equivalence region that is 1/5 of a point on the Likert scale.  The Bayes factor for the equivalence-region model was `r round(bfE[3],2)`-to-1 when compared to the null model, which indicates modest preference for the null.
