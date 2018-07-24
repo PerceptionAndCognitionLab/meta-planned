@@ -1,0 +1,62 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+\begin{center}
+\begin{threeparttable}
+\caption{\label{tab:sens}}
+\begin{tabular}{lllll}
+\toprule
+Mean & \multicolumn{1}{c}{SD} & \multicolumn{1}{c}{Null-to-Common} & \multicolumn{1}{c}{Null-to-Unconstrained} & \multicolumn{1}{c}{Null-to-Positive}\\
+\midrule
+0.40 & 0.24 & 11.3-to-1 & 261.1-to-1 & 47173.7-to-1\\
+0.40 & 0.40 & 11.3-to-1 & 1964.3-to-1 & 2689151.6-to-1\\
+0.40 & 0.12 & 11.4-to-1 & 52.8-to-1 & 1620.3-to-1\\
+0.80 & 0.48 & 22.2-to-1 & 9929.5-to-1 & Inf-to-1\\
+0.80 & 0.80 & 22.3-to-1 & 371027.3-to-1 & Inf-to-1\\
+0.80 & 0.24 & 21-to-1 & 504.4-to-1 & 149297.3-to-1\\
+0.20 & 0.12 & 5.8-to-1 & 27.1-to-1 & 630.7-to-1\\
+0.20 & 0.20 & 5.8-to-1 & 78.1-to-1 & 14582.6-to-1\\
+0.20 & 0.06 & 5.8-to-1 & 12.8-to-1 & 82.9-to-1\\
+\bottomrule
+\addlinespace
+\end{tabular}
+\begin{tablenotes}[para]
+\textit{Note.} Infinite values exceed our machine precision of $10^304$
+\end{tablenotes}
+\end{threeparttable}
+\end{center}
+\end{table*}
+\efloatseparator
+ 
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+\begin{center}
+\begin{threeparttable}
+\caption{\label{tab:ml3BF}}
+\begin{tabular}{ll}
+\toprule
+Model & \multicolumn{1}{c}{Bayes Factor}\\
+\midrule
+Common Site + Common Gender + Common Credential & 1-to-1\\
+Common Site + Common Gender + Common Men Credential & 1-to-50.6\\
+Common Site + Common Gender + Common 2 Credentials & 1-to-6.3\\
+Common Site + Common Gender & 1-to-101.7\\
+Common Site + Commen Credential & 1-to-26977.6\\
+Positive Site + Common Gender + Common Credential & 1-to-0.8\\
+Unconstrained Site + Common Gender + Common Credential & 1-to-4.3\\
+Common Site + Positive Gender + Common Credential & 1-to-4.5\\
+Common Site + Common Gender + Positive Credential & 1-to-12\\
+Common Site + Common Gender + Unconstrained Credential & 1-to-Inf\\
+Comon Site + Unconstrained Credential + Common Credential & 1-to-3.3\\
+\bottomrule
+\addlinespace
+\end{tabular}
+\begin{tablenotes}[para]
+\textit{Note.} Infinite values exceed our machine precision of $10^304$
+\end{tablenotes}
+\end{threeparttable}
+\end{center}
+\end{table*}
+\efloatseparator
+ 

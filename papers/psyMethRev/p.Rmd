@@ -62,6 +62,9 @@ library("ggplot2")
 library("grid")
 library("RColorBrewer")
 library("reshape2")
+library('BayesFactor')
+library('MCMCpack')
+library('diagram')
 ```
 
 Most readers at some point have considered the validity of averages.  Sometimes, we may have been asked, "What does this average mean?" or, "Who does this average describe?"  We may be quick to to gloss over such questions.  After all, the average, or sample mean, is a natural measure of the central tendency, and central tendency holds a privileged place in understanding variability.
